@@ -7,9 +7,6 @@
     "svgSprive": "gulp svgSprive",
     "dev": "gulp",
     "build": "gulp build --build",
-    "prettier": "npx prettier . --write",
-    "lint": "npx eslint ./src",
-    "lintfix": "npx eslint ./src --fix",
     "format": "npx eslint ./src --fix && npx prettier . --write"
   },
   "repository": {
