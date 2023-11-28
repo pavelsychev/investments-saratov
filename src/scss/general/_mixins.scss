@@ -1,0 +1,32 @@
+@mixin sizes($width: 100%, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin noScrollLine() {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  scrollbar-width: none;
+}
+
+@mixin showMob() {
+  .--desc {
+    display: none;
+  }
+
+  .--mob {
+    display: flex;
+  }
+}
+
+@mixin showDesc() {
+  .--desc {
+    display: flex;
+  }
+
+  .--mob {
+    display: none;
+  }
+}
