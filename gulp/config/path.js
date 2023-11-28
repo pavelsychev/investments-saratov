@@ -3,6 +3,7 @@ const rootFolder = nodePath.basename(nodePath.resolve());
 
 const buildFolder = './dist';
 const srcFolder = './src';
+const assetsFolder = './src/assets';
 
 export const path = {
   build: {
@@ -10,7 +11,7 @@ export const path = {
     css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
     files: `${buildFolder}/files/`,
-    fonts: `${buildFolder}/fonts`,
+    fonts: `${buildFolder}/fonts/`,
     images: `${buildFolder}/img/`,
   },
   src: {
@@ -32,6 +33,7 @@ export const path = {
   clean: buildFolder,
   srcFolder: srcFolder,
   buildFolder: buildFolder,
+  assetsFolder: assetsFolder,
   rootFolder: rootFolder,
   ftp: ``,
 };
