@@ -1,7 +1,7 @@
 .governor {
-  margin-bottom: 160px;
   background: $blueGradient;
   position: relative;
+  overflow: hidden;
 
   &__container {
     padding: 160px 0;
@@ -12,7 +12,7 @@
   &__img {
     position: absolute;
     bottom: 0;
-    left: -10px;
+    left: 0;
 
     img {
       height: 100%;
@@ -26,21 +26,21 @@
     position: relative;
   }
 
+  &__desc-titles {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+  }
+
   &__desc-icon {
     position: absolute;
     top: -50px;
-    right: 10px;
+    left: 392px;
     @include sizes(278px, 268px);
   }
 
-  &__desc-title {
-    margin-bottom: 40px;
-  }
-
   &__desc-quote {
-    font-variant-numeric: lining-nums proportional-nums;
     font-size: 20px;
-    font-weight: 400;
     line-height: 140%;
     margin-bottom: 20px;
   }
@@ -51,7 +51,6 @@
   }
 
   &__desc-gover-name {
-    font-variant-numeric: lining-nums proportional-nums;
     font-size: 16px;
     font-weight: 600;
     line-height: 140%;
@@ -63,10 +62,8 @@
   }
 }
 
-@media screen and (max-width: 1920px) and (min-width: 1367px) {
+@media screen and (max-width: $laptop) {
   .governor {
-    margin-bottom: 140px;
-
     &__container {
       padding: 140px 0;
     }
@@ -76,7 +73,7 @@
     }
 
     &__desc-icon {
-      right: -50px;
+      left: 350px;
     }
 
     &__desc-quote {
@@ -85,10 +82,8 @@
   }
 }
 
-@media screen and (max-width: 1367px) and (min-width: 768px) {
+@media screen and (max-width: $tablet) {
   .governor {
-    margin-bottom: 100px;
-
     &__container {
       padding: 97px 0 550px 0;
       justify-content: center;
@@ -102,8 +97,11 @@
       left: auto;
     }
 
-    &__desc-title {
+    &__desc-titles {
       margin-bottom: 32px;
+    }
+
+    &__desc-title {
       max-width: 350px;
     }
 
@@ -114,6 +112,7 @@
     &__desc-quote {
       line-height: 130%;
       margin-bottom: 32px;
+      font-size: 20px;
     }
 
     &__desc-managment {
@@ -124,15 +123,13 @@
 
     &__desc-icon {
       top: -27px;
-      right: 268px;
+      left: 275px;
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mob) {
   .governor {
-    margin-bottom: 80px;
-
     &__container {
       padding: 85px 0 350px;
       justify-content: center;
@@ -141,23 +138,27 @@
     &__desc-icon {
       @include sizes(136px, 131px);
       top: -20px;
-      right: 0;
+      left: 190px;
     }
 
     &__img {
-      left: auto;
+      @include sizes(630px, 420px);
     }
 
-    &__desc-title {
+    &__desc-titles {
       margin-bottom: 24px;
     }
 
     &__desc-quote {
       font-size: 16px;
+      line-height: 138%;
+      margin-bottom: 20px;
     }
 
     &__desc-managment {
       row-gap: 24px;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     &__desc-gover-name {

@@ -4,28 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20231129122606" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231129211216" />
 </head>
 
 
   <body>
-    <section class="governor">
+    <section class="section governor">
   <div class="container">
     <div class="governor__container">
       <div class="governor__img">
         <picture>
-          <source media="(max-width: 768px)" srcset="assets/img/governor-mob.png" />
-          <source media="(max-width: 1366px)" srcset="assets/img/governor-tablet.png" />
-          <source media="(max-width: 1920px)" srcset="assets/img/governor-laptop.png" />
-          <source media="(min-width: 1919px)" srcset="assets/img/governor.png" />
-          <img src="assets/img/governor.png" alt="logo" />
+          <source media="(min-width: 1920px)" srcset="assets/img/governor/governor.png" />
+          <source media="(max-width: 1921px) and (min-width: 1365px)" srcset="assets/img/governor/governor-laptop.png" />
+          <source media="(max-width: 1366px)" srcset="assets/img/governor/governor-tablet.png" />
+          <img src="assets/img/governor/governor.png" alt="" />
         </picture>
       </div>
       <div class="governor__desc">
-        <div class="governor__desc-icon">
-          <img src="assets/img/icons/icons.svg#gover-icon" alt="" />
+        <div class="governor__desc-titles">
+          <p class="governor__desc-title h2">Обращение губернатора</p>
+          <div class="governor__desc-icon">
+            <img src="assets/img/icons/icons.svg#gover-icon" alt="" />
+          </div>
         </div>
-        <p class="governor__desc-title h2">Обращение губернатора</p>
         <p class="governor__desc-quote">
           Улучшению инвестиционного климата уделяем большое внимание: убираем бюрократические препоны, чтобы инвестор
           в кратчайшие сроки смог получить разрешение на строительство и подключиться к коммуникациям. И такая поддержка
@@ -51,9 +52,9 @@
       <div class="footer__top">
         <div class="footer__logo logo">
           <picture>
-            <source media="(max-width: 1367px)" srcset="assets/img/icons/logo-sm.svg" />
-            <source media="(min-width: 1367px)" srcset="assets/img/icons/icons.svg#logo" />
-            <img src="assets/img/icons/icons.svg#logo" alt="logo" />
+            <source media="(min-width: 1365px)" srcset="assets/img/icons/logo.svg" />
+            <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-sm.svg" />
+            <img src="assets/img/icons/logo.svg" alt="logo" />
           </picture>
         </div>
         <div class="footer__info">
@@ -213,7 +214,7 @@
   </div>
 </footer>
 
-    <script src="js/app.min.js?_v=20231129122606"></script>
+    <script src="js/app.min.js?_v=20231129211216"></script>
 
   </body>
 </html>

@@ -1,5 +1,5 @@
 function clickFullText() {
-  if (document.querySelector('.js-dropdown-list') && window.innerWidth < 768) {
+  if (document.querySelector('.js-dropdown-list') && window.innerWidth < 767) {
     const dropdownLists = document.querySelectorAll('.js-dropdown-list');
 
     dropdownLists.forEach((dropdownList) => {

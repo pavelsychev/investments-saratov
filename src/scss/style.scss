@@ -2,6 +2,7 @@
 @import './libs/normalize.scss';
 
 // General
+@import './general/breakpoints.scss';
 @import './general/colors.scss';
 @import './general/transitions.scss';
 @import './general/mixins.scss';
@@ -19,4 +20,4 @@
 @import './blocks/footer.scss';
 
 // Pages
-@import './pages/index.scss';
+@import './pages/main/index.scss';
