@@ -4,12 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20231128234252" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231129111146" />
 </head>
 
 
   <body>
-    <footer class="footer">
+    <section class="governor">
+  <div class="container">
+    <div class="governor__container">
+      <div class="governor__img">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/governor-mob.png" />
+          <source media="(max-width: 1366px)" srcset="img/governor-tablet.png" />
+          <source media="(max-width: 1920px)" srcset="img/governor-laptop.png" />
+          <source media="(min-width: 1919px)" srcset="img/governor.png" />
+          <img src="img/governor.png" alt="logo" />
+        </picture>
+      </div>
+      <div class="governor__desc">
+        <div class="governor__desc-icon">
+          <img src="img/icons/icons.svg#gover-icon" alt="" />
+        </div>
+        <p class="governor__desc-title h2">Обращение губернатора</p>
+        <p class="governor__desc-quote">
+          Улучшению инвестиционного климата уделяем большое внимание: убираем бюрократические препоны, чтобы инвестор
+          в кратчайшие сроки смог получить разрешение на строительство и подключиться к коммуникациям. И такая поддержка
+          дала свой результат: в федеральном инвестиционном рейтинге область поднялась с 18-го на 13-е место. У нас одна
+          из лучших динамик, и это было отмечено Президентом Владимиром Владимировичем Путиным.
+        </p>
+        <div class="governor__desc-managment">
+          <div class="governor__desc-gover">
+            <p class="governor__desc-gover-name">Роман Викторович Бусаргин</p>
+            <p class="governor__desc-gover-job">Губернатор Саратовской области</p>
+          </div>
+          <button type="button" class="governor__desc-btn btn-L btn-L--white">
+            <span>Связаться с руководством</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <footer class="footer">
   <div class="container">
     <div class="footer__container">
       <div class="footer__top">
@@ -176,7 +212,8 @@
     </div>
   </div>
 </footer>
- <script src="js/app.min.js?_v=20231128234252"></script>
+
+    <script src="js/app.min.js?_v=20231129111146"></script>
 
   </body>
 </html>

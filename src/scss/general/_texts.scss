@@ -42,12 +42,12 @@
   line-height: 110%;
   text-transform: uppercase;
 
-  @media screen and (max-width: 85.5em) {
-    font-size: 48px;
+  @media screen and (max-width: 1367px) and (min-width: 768px) {
+    font-size: 40px;
   }
 
-  @media screena and (max-width: 48em) {
-    font-size: 40px;
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
   }
 }
 

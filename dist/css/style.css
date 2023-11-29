@@ -379,6 +379,7 @@ template {
   display: none;
 }
 
+.governor__desc-managment,
 .footer__list-items {
   display: flex;
   flex-direction: column;
@@ -417,6 +418,21 @@ template {
   line-height: 140%;
 }
 
+.btn-L span {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.h2 {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
 .footer__info-link {
   font-variant-numeric: lining-nums proportional-nums;
   font-size: 20px;
@@ -424,6 +440,7 @@ template {
   line-height: 130%;
 }
 
+.governor__desc-gover-job,
 .footer__bottom-txt,
 .footer__item {
   font-variant-numeric: lining-nums proportional-nums;
@@ -625,10 +642,52 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.h2 {
+  color: #ffffff;
+}
+
 fieldset {
   padding: 0;
   margin: 0;
   border: 0;
+}
+
+.btn-L {
+  padding: 16px 32px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  transition: background-color 0.5s ease;
+}
+
+.btn-L span {
+  transition: color 0.5s ease;
+}
+
+.btn-L--white {
+  background-color: #ffffff;
+}
+
+.btn-L--white span {
+  color: #2f2f2f;
+}
+
+.btn-L--white:hover {
+  background-color: #2d6fd0;
+}
+
+.btn-L--white:hover span {
+  color: #ffffff;
+}
+
+.btn-L--white:active {
+  background: #1d49a0;
+  transition-duration: 0s;
+}
+
+.btn-L--white:active span {
+  color: #2f2f2f;
+  transition-duration: 0s;
 }
 
 .footer {
@@ -726,7 +785,83 @@ fieldset {
   color: #7b7b7b;
 }
 
+.governor {
+  margin-bottom: 160px;
+  background: linear-gradient(94deg, #144286 0%, #2d6fd0 100%);
+  position: relative;
+}
+
+.governor__container {
+  padding: 160px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.governor__img {
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+}
+
+.governor__img img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.governor__desc {
+  width: 680px;
+  color: #ffffff;
+  position: relative;
+}
+
+.governor__desc-icon {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  width: 278px;
+  height: 268px;
+}
+
+.governor__desc-title {
+  margin-bottom: 40px;
+}
+
+.governor__desc-quote {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+
+.governor__desc-managment {
+  row-gap: 40px;
+}
+
+.governor__desc-gover-name {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 2px;
+}
+
 @media screen and (max-width: 768px) {
+  .h2 {
+    font-size: 32px;
+  }
+
+  .btn-L {
+    width: 100%;
+    text-align: center;
+    padding: 12px 28px;
+  }
+
+  .btn-L span {
+    font-size: 16px;
+  }
+
   .footer__logo {
     width: 39px;
   }
@@ -815,21 +950,50 @@ fieldset {
     align-items: flex-start;
     row-gap: 20px;
   }
-}
 
-@media screen and (max-width: 768px) and (min-width: 360px) {
-  .container {
-    padding: 0 16px;
+  .governor {
+    margin-bottom: 80px;
   }
-}
 
-@media screen and (max-width: 1920px) and (min-width: 1367px) {
-  .footer__bottom-txt {
+  .governor__container {
+    padding: 85px 0 350px;
+    justify-content: center;
+  }
+
+  .governor__desc-icon {
+    width: 136px;
+    height: 131px;
+    top: -20px;
+    right: 0;
+  }
+
+  .governor__img {
+    left: auto;
+  }
+
+  .governor__desc-title {
+    margin-bottom: 24px;
+  }
+
+  .governor__desc-quote {
     font-size: 16px;
+  }
+
+  .governor__desc-managment {
+    row-gap: 24px;
+  }
+
+  .governor__desc-gover-name {
+    font-weight: 500;
+    margin-bottom: 4px;
   }
 }
 
 @media screen and (max-width: 1367px) and (min-width: 768px) {
+  .h2 {
+    font-size: 40px;
+  }
+
   .footer__top {
     padding: 80px 0 50px;
   }
@@ -844,5 +1008,86 @@ fieldset {
 
   .footer__logo {
     width: 39px;
+  }
+
+  .governor {
+    margin-bottom: 100px;
+  }
+
+  .governor__container {
+    padding: 97px 0 550px 0;
+    justify-content: center;
+  }
+
+  .governor__desc {
+    width: 100%;
+  }
+
+  .governor__img {
+    left: auto;
+  }
+
+  .governor__desc-title {
+    margin-bottom: 32px;
+    max-width: 350px;
+  }
+
+  .governor__desc-icon {
+    width: 144px;
+    height: 139px;
+  }
+
+  .governor__desc-quote {
+    line-height: 130%;
+    margin-bottom: 32px;
+  }
+
+  .governor__desc-managment {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .governor__desc-icon {
+    top: -27px;
+    right: 268px;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1366px) {
+  .container {
+    padding: 0 93px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 360px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1367px) {
+  .footer__bottom-txt {
+    font-size: 16px;
+  }
+
+  .governor {
+    margin-bottom: 140px;
+  }
+
+  .governor__container {
+    padding: 140px 0;
+  }
+
+  .governor__desc {
+    width: 580px;
+  }
+
+  .governor__desc-icon {
+    right: -50px;
+  }
+
+  .governor__desc-quote {
+    font-size: 18px;
   }
 }

@@ -1,0 +1,49 @@
+.btn-L {
+  padding: 16px 32px;
+  width: fit-content;
+  border-radius: 4px;
+  transition: $transitionBgCol;
+
+  span {
+    @extend %medium18;
+    transition: $transitionColor;
+  }
+
+  &--white {
+    background-color: $white;
+
+    span {
+      color: $black;
+    }
+
+    &:hover {
+      background-color: $bluePrimary;
+
+      span {
+        color: $white;
+      }
+    }
+
+    &:active {
+      background: $blue-1;
+      transition-duration: 0s;
+
+      span {
+        color: $black;
+        transition-duration: 0s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-L {
+    width: 100%;
+    text-align: center;
+    padding: 12px 28px;
+
+    span {
+      font-size: 16px;
+    }
+  }
+}
