@@ -1,0 +1,230 @@
+.steps-investor {
+  &__container {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    color: $black;
+  }
+
+  &__content {
+    @extend %flexStretchBetween;
+    column-gap: 20px;
+  }
+
+  &__img {
+    flex: 0 0 630px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 20px;
+    width: 100%;
+  }
+
+  &__item {
+    background-color: $white;
+    border-radius: 4px;
+    padding: 40px 32px;
+    position: relative;
+
+    &.active {
+      .steps-investor__item-title {
+        padding-bottom: 20px;
+      }
+
+      .steps-investor__item-content {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .steps-investor__item-btn {
+        img {
+          &:first-child {
+            opacity: 0;
+            visibility: hidden;
+          }
+
+          &:last-child {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  &__item-btn {
+    @include sizes(32px, 32px);
+    border-radius: 4px;
+    border: 1.4px solid $bluePrimary;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    right: 32px;
+
+    img {
+      position: absolute;
+      top: calc(50% - 11px / 2);
+      left: calc(50% - 11px / 2);
+      @include sizes(11px, 11px);
+      transition: $transitionOpacity, $transitionOpacity;
+
+      &:first-child {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &:last-child {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__item-title {
+    @extend %flexStart;
+    column-gap: 20px;
+    transition: $transitionPadding;
+    max-width: 90%;
+  }
+
+  &__item-number {
+    color: $bluePrimary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+
+  &__item-tit {
+    @extend %subheader;
+  }
+
+  &__item-content {
+    padding-left: 48px;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
+  }
+
+  &__item-txt {
+    @extend %mainTxt;
+  }
+
+  &__item-but {
+    margin-top: 40px;
+  }
+
+  &__item-list {
+    @extend %flexColumn;
+    row-gap: 8px;
+
+    li {
+      position: relative;
+      @extend %flexStart;
+      column-gap: 4px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 140%;
+
+      &::before {
+        content: '';
+        background: url('../assets/img/icons/icons.svg#bullet');
+        @include sizes(20px, 20px);
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .steps-investor {
+    &__img {
+      flex: 0 0 480px;
+    }
+
+    &__item-content {
+      width: 518px;
+    }
+
+    &__item-txt,
+    &__item-list li {
+      font-size: 18px;
+      line-height: 140%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .steps-investor {
+    &__img {
+      display: none;
+    }
+
+    &__item {
+      padding: 32px;
+    }
+
+    &__item-tit {
+      line-height: 120%;
+    }
+
+    &__item-content {
+      width: 100%;
+    }
+
+    &__item-btn {
+      top: 32px;
+    }
+
+    &__item-but {
+      margin-top: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .steps-investor {
+    &__item {
+      padding: 20px;
+
+      &.active {
+        .steps-investor__item-tit {
+          font-size: 24px;
+        }
+      }
+    }
+
+    &__item-btn {
+      top: 20px;
+      right: 20px;
+    }
+
+    &__item-title {
+      flex-direction: column;
+      row-gap: 21px;
+      max-width: 100%;
+    }
+
+    &__item-tit {
+      font-size: 20px;
+      transition: $transitionFontSize;
+    }
+
+    &__item-content {
+      padding-left: 0;
+    }
+
+    &__item-txt,
+    &__item-list li {
+      font-size: 16px;
+    }
+  }
+}

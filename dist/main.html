@@ -4,12 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20231129211216" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231129235823" />
 </head>
 
 
   <body>
-    <section class="section governor">
+    <section class="section steps-investor">
+  <div class="container">
+    <div class="steps-investor__container">
+      <div class="steps-investor__title h2">шаги инвестора</div>
+      <div class="steps-investor__content">
+        <div class="steps-investor__items">
+          <div class="steps-investor__item js-dropdown-list">
+            <button type="button" class="steps-investor__item-btn js-dropdown-title">
+              <img src="assets/img/icons/icons.svg#plus-steps" alt="open" />
+              <img src="assets/img/icons/icons.svg#minus-steps" alt="close" />
+            </button>
+            <div class="steps-investor__item-title">
+              <div class="steps-investor__item-number">01</div>
+              <div class="steps-investor__item-tit">Подача заявки</div>
+            </div>
+            <div class="steps-investor__item-content js-dropdown-content">
+              <p class="steps-investor__item-txt">
+                Инвестор может подать заявку на адрес электронной почты aokrso@mail.ru, через раздел «Линия прямых
+                обращений» или связавшись со специалистами по телефону <a href="tel:+78452796996">+7 (8452) 79-69-96</a>
+              </p>
+              <button type="button" class="steps-investor__item-but btn btn-L">
+                <span>Подать заявку</span>
+              </button>
+            </div>
+          </div>
+          <div class="steps-investor__item js-dropdown-list">
+            <button type="button" class="steps-investor__item-btn js-dropdown-title">
+              <img src="assets/img/icons/icons.svg#plus-steps" alt="open" />
+              <img src="assets/img/icons/icons.svg#minus-steps" alt="close" />
+            </button>
+            <div class="steps-investor__item-title">
+              <div class="steps-investor__item-number">02</div>
+              <div class="steps-investor__item-tit">Анализ и обратная связь</div>
+            </div>
+            <div class="steps-investor__item-content js-dropdown-content">
+              <p class="steps-investor__item-txt">
+                Запрос у инвестора необходимых документов, уточнение необходимых деталей, встреча с инициатором
+              </p>
+            </div>
+          </div>
+          <div class="steps-investor__item js-dropdown-list">
+            <button type="button" class="steps-investor__item-btn js-dropdown-title">
+              <img src="assets/img/icons/icons.svg#plus-steps" alt="open" />
+              <img src="assets/img/icons/icons.svg#minus-steps" alt="close" />
+            </button>
+            <div class="steps-investor__item-title">
+              <div class="steps-investor__item-number">03</div>
+              <div class="steps-investor__item-tit">Полное сопровождение проекта</div>
+            </div>
+            <div class="steps-investor__item-content js-dropdown-content">
+              <ul class="steps-investor__item-list">
+                <li>заключение соглашение о сотрудничестве в реализации инвестиционного проекта</li>
+                <li>подбор площадки</li>
+                <li>поиск заемного финансирования</li>
+                <li>поиск инвестора и со- инвестора</li>
+                <li>проработка возможных к получению льгот и преференций</li>
+                <li>устранение административных барьеров</li>
+                <li>
+                  организация взаимодействия с ресурсоснабжающими организациями, <br />
+                  операторами инженерной и дорожной инфраструктуры
+                </li>
+                <li>кадровое обеспечение проекта</li>
+                <li>консультации по вопросам проекта</li>
+              </ul>
+            </div>
+          </div>
+          <div class="steps-investor__item js-dropdown-list">
+            <button type="button" class="steps-investor__item-btn js-dropdown-title">
+              <img src="assets/img/icons/icons.svg#plus-steps" alt="open" />
+              <img src="assets/img/icons/icons.svg#minus-steps" alt="close" />
+            </button>
+            <div class="steps-investor__item-title">
+              <div class="steps-investor__item-number">04</div>
+              <div class="steps-investor__item-tit">Запуск проекта</div>
+            </div>
+            <div class="steps-investor__item-content js-dropdown-content">
+              <ul class="steps-investor__item-list">
+                <li>информационная поддержка</li>
+                <li>дальнейшее содействие в работе</li>
+              </ul>
+              <button type="button" class="steps-investor__item-but btn btn-L">
+                <span>Подать заявку</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="steps-investor__img">
+          <picture><source srcset="assets/img/steps-investor.webp" type="image/webp"><img src="assets/img/steps-investor.png" alt="" /></picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="section governor">
   <div class="container">
     <div class="governor__container">
       <div class="governor__img">
@@ -46,17 +139,18 @@
     </div>
   </div>
 </section>
- <footer class="footer">
+
+    <footer class="footer">
   <div class="container">
     <div class="footer__container">
       <div class="footer__top">
-        <div class="footer__logo logo">
+        <a href="./main.html" class="footer__logo logo">
           <picture>
             <source media="(min-width: 1365px)" srcset="assets/img/icons/logo.svg" />
             <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-sm.svg" />
             <img src="assets/img/icons/logo.svg" alt="logo" />
           </picture>
-        </div>
+        </a>
         <div class="footer__info">
           <div class="footer__info-block">
             <p class="footer__info-title">Email</p>
@@ -213,8 +307,7 @@
     </div>
   </div>
 </footer>
-
-    <script src="js/app.min.js?_v=20231129211216"></script>
+ <script src="js/app.min.js?_v=20231129235823"></script>
 
   </body>
 </html>

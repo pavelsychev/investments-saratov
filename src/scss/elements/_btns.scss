@@ -3,10 +3,12 @@
   width: fit-content;
   border-radius: 4px;
   transition: $transitionBgCol;
+  background: $blueGradient;
 
   span {
     @extend %medium18;
     transition: $transitionColor;
+    color: $white;
   }
 
   &--white {
