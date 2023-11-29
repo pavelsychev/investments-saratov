@@ -81,7 +81,7 @@ p {
 
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -127,30 +127,6 @@ li {
   list-style-type: none;
 }
 
-.container {
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 0 40px;
-
-  @media screen and (max-width: 1920px) and (min-width: 1366px) {
-    // max-width: 1270px;
-    padding: 0 93px;
-  }
-
-  @media screen and (max-width: 1366px) and (min-width: 768px) {
-    // max-width: 768px;
-  }
-
-  @media screen and (max-width: 768px) and (min-width: 360px) {
-    // max-width: 360px;
-    padding: 0 16px;
-  }
-}
-
-.hidden {
-  overflow: hidden;
-}
-
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -161,31 +137,35 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 .h2 {
   @extend %h2;
   color: $white;
 }
 
-// @media (max-width: 48em) {
-//   html {
-//     font-size: 5px;
-//     font-size: 1.5625vw;
-//     font-size: calc((100 / 375) * 5vw); // где 375 это ширина моб версии макета
-//     -webkit-text-size-adjust: none;
-//   }
+.hidden {
+  overflow: hidden;
+}
 
-//   body {
-//     -webkit-text-size-adjust: none;
-//   }
+.container {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
 
-//   .container {
-//     padding: 0 4.27vw; // в моб версии отступ от края задаем для всех контейнеров, а там где не нужно можем точечно убрать
-//     width: 100%;
-//   }
-// }
+@media screen and (max-width: 1920px) {
+  .container {
+    padding: 0 93px;
+  }
+}
 
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
+@media screen and (max-width: 658px) {
+  .container {
+    padding: 0 16px;
+  }
 }

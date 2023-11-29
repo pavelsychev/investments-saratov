@@ -458,7 +458,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../assets/fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -466,15 +466,7 @@ template {
 @font-face {
   font-family: Raleway;
   font-display: swap;
-  src: url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Raleway;
-  font-display: swap;
-  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  src: url("../assets/fonts/Raleway-Regular.woff2") format("woff2"), url("../assets/fonts/Raleway-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -482,8 +474,16 @@ template {
 @font-face {
   font-family: Raleway;
   font-display: swap;
-  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff");
+  src: url("../assets/fonts/Raleway-SemiBold.woff2") format("woff2"), url("../assets/fonts/Raleway-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../assets/fonts/Raleway-Medium.woff2") format("woff2"), url("../assets/fonts/Raleway-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -576,7 +576,7 @@ p {
 
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -622,16 +622,6 @@ li {
   list-style-type: none;
 }
 
-.container {
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.hidden {
-  overflow: hidden;
-}
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -642,14 +632,24 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.h2 {
-  color: #ffffff;
-}
-
 fieldset {
   padding: 0;
   margin: 0;
   border: 0;
+}
+
+.h2 {
+  color: #ffffff;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .btn-L {
@@ -847,6 +847,12 @@ fieldset {
   margin-bottom: 2px;
 }
 
+@media screen and (max-width: 1920px) {
+  .container {
+    padding: 0 93px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .h2 {
     font-size: 32px;
@@ -989,6 +995,12 @@ fieldset {
   }
 }
 
+@media screen and (max-width: 658px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
 @media screen and (max-width: 1367px) and (min-width: 768px) {
   .h2 {
     font-size: 40px;
@@ -1051,18 +1063,6 @@ fieldset {
   .governor__desc-icon {
     top: -27px;
     right: 268px;
-  }
-}
-
-@media screen and (max-width: 1920px) and (min-width: 1366px) {
-  .container {
-    padding: 0 93px;
-  }
-}
-
-@media screen and (max-width: 768px) and (min-width: 360px) {
-  .container {
-    padding: 0 16px;
   }
 }
 
