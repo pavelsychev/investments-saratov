@@ -54,6 +54,7 @@ textarea {
   outline: none;
   cursor: pointer;
   font: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:focus {
     outline: none;

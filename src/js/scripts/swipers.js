@@ -24,4 +24,8 @@ function initBenefitsSlider() {
   }
 }
 
-initBenefitsSlider();
+function initSliders() {
+  initBenefitsSlider();
+}
+
+document.addEventListener('DOMContentLoaded', initSliders);

@@ -44,7 +44,7 @@
       }
 
       .steps-investor__item-btn {
-        img {
+        svg {
           &:first-child {
             opacity: 0;
             visibility: hidden;
@@ -68,7 +68,7 @@
     top: 40px;
     right: 32px;
 
-    img {
+    svg {
       position: absolute;
       top: calc(50% - 11px / 2);
       left: calc(50% - 11px / 2);
@@ -136,7 +136,7 @@
 
       &::before {
         content: '';
-        background: url('../assets/img/icons/icons.svg#bullet');
+        background: url('../assets/img/icons/bullet.svg');
         @include sizes(20px, 20px);
         flex-shrink: 0;
       }

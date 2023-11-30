@@ -3,7 +3,6 @@
   width: fit-content;
   transition: $transitionBg, $transitionBorder;
   padding: 16px 32px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   span {
     @extend %medium18;

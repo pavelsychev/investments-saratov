@@ -41,8 +41,7 @@ function addActiveFirstStepsOnLoad() {
   });
 }
 
-clickFullText();
-
 document.addEventListener('DOMContentLoaded', () => {
   addActiveFirstStepsOnLoad();
+  clickFullText();
 });

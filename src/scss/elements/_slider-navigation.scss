@@ -2,6 +2,13 @@
   @extend %flexCenter;
   column-gap: 32px;
 
+  width: fit-content;
+  bottom: 0;
+  right: 40px;
+  position: absolute;
+  z-index: 2;
+  justify-content: flex-end;
+
   &__btns {
     display: flex;
     column-gap: 16px;
@@ -37,5 +44,25 @@
     .swiper-pagination-current {
       font-weight: 600;
     }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .slider-navigation {
+    right: 92px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .slider-navigation {
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .slider-navigation {
+    position: static;
+    width: 100%;
+    justify-content: space-between;
   }
 }
