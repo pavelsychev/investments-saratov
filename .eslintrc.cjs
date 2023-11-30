@@ -19,5 +19,6 @@ module.exports = {
     'no-new': 'off',
     'no-unused-expressions': 'off',
     'import/no-mutable-exports': 'off',
+    'no-dupe-keys': 'off',
   },
 };
