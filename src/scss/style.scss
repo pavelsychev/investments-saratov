@@ -1,4 +1,5 @@
 // Libs
+@import './libs/swiper.scss';
 @import './libs/normalize.scss';
 
 // General
@@ -15,6 +16,7 @@
 
 // Elements
 @import './elements/btns.scss';
+@import './elements/slider-navigation.scss';
 
 // Blocks
 @import './blocks/footer.scss';
