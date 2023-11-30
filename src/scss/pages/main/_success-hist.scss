@@ -1,4 +1,4 @@
-.benefits {
+.success-hist {
   position: relative;
 
   &__title {
@@ -29,6 +29,15 @@
     top: 0;
   }
 
+  &__slide {
+    &.swiper-slide-active {
+      .success-hist__slide-content {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
   &__slide-img {
     @extend %fullSize;
     position: absolute;
@@ -56,15 +65,6 @@
     max-width: 575px;
   }
 
-  &__slide {
-    &.swiper-slide-active {
-      .benefits__slide-content {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-
   &__bg {
     position: absolute;
     bottom: 0;
@@ -79,29 +79,76 @@
   }
 
   &__slide-content {
+    row-gap: 225px;
     opacity: 0;
     visibility: hidden;
     transition:
       visibility 1s ease-in-out,
       opacity 1s ease-in-out;
   }
+
+  &__slide-items {
+    @extend %flexCenterStart;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 48px;
+    max-width: 1000px;
+  }
+
+  &__slide-item {
+    flex-shrink: 0;
+    min-width: 440px;
+  }
+
+  &__slide-title {
+    margin-bottom: 12px;
+    color: $white;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+
+  &__slide-desc {
+    @extend %h3;
+    color: $white;
+  }
+
+  &__slide-head {
+    max-width: 630px;
+  }
+
+  &__slide-name {
+    margin-bottom: 40px;
+    color: $white;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%;
+  }
 }
 
 @media screen and (max-width: $laptop) {
-  .benefits {
+  .success-hist {
     &__container,
     &__slide-content {
       height: 850px;
     }
 
+    &__slide-content {
+      padding-bottom: 80px;
+    }
+
     &__container {
       padding-bottom: 100px;
+    }
+
+    &__slide-content {
+      row-gap: 205px;
     }
   }
 }
 
 @media screen and (max-width: $tablet) {
-  .benefits {
+  .success-hist {
     &__container {
       padding: 80px 0;
     }
@@ -114,18 +161,35 @@
     &__slide-content {
       padding-bottom: 80px;
     }
+
+    &__slide-items {
+      row-gap: 24px;
+    }
+
+    &__slide-title {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    &__slide-desc {
+      font-size: 24px;
+    }
+
+    &__slide-content {
+      row-gap: 110px;
+    }
   }
 }
 
 @media screen and (max-width: $mob) {
-  .benefits {
+  .success-hist {
     &__container {
-      padding: 70px 0 80px;
+      padding: 70px 0;
     }
 
     &__container,
     &__slide-content {
-      height: 700px;
+      height: 750px;
     }
 
     &__title {
@@ -139,6 +203,36 @@
     &__slide-content {
       row-gap: 32px;
       padding-bottom: 152px;
+    }
+
+    &__slide-items {
+      row-gap: 16px;
+    }
+
+    &__slide-title {
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &__slide-desc {
+      font-size: 20px;
+    }
+
+    &__slide-head {
+      max-width: 100%;
+    }
+
+    &__slide-name {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 140%;
+      margin-bottom: 32px;
+    }
+
+    &__slide-content {
+      row-gap: 85px;
+      padding-bottom: 140px;
     }
   }
 }
