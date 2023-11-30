@@ -1,47 +1,191 @@
-.btn-L {
-  padding: 16px 32px;
-  width: fit-content;
+.btn {
   border-radius: 4px;
-  transition: $transitionBgCol;
-  background: $blueGradient;
+  width: fit-content;
+  transition: $transitionBg, $transitionBorder;
+  padding: 16px 32px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   span {
     @extend %medium18;
     transition: $transitionColor;
+  }
+
+  svg {
+    @include sizes(20px, 20px);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:not(:disabled):active {
+    transition-duration: 0s;
+
+    span,
+    svg {
+      transition-duration: 0s;
+    }
+  }
+}
+
+.btn--icon {
+  padding: 12px 20px;
+  @extend %flexCenterBetween;
+  column-gap: 4px;
+}
+
+.btn-def {
+  background: $blueGradient;
+
+  span {
     color: $white;
   }
 
-  &--white {
-    background-color: $white;
+  svg use {
+    stroke: $white;
+  }
+
+  &:disabled {
+    background: $grayDisabled;
 
     span {
-      color: $black;
+      color: $greyTxt;
     }
 
-    &:hover {
-      background-color: $bluePrimary;
+    svg use {
+      stroke: $greyTxt;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:not(:disabled):hover {
+      background: $bluePrimary;
+    }
+  }
+
+  &:not(:disabled):active {
+    background: $blue-1;
+  }
+}
+
+.btn-def--white {
+  background: $white;
+
+  span {
+    color: $black;
+  }
+
+  &:disabled {
+    background: $grayDisabled;
+
+    span {
+      color: $greyTxt;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:not(:disabled):hover {
+      background: $bluePrimary;
 
       span {
         color: $white;
       }
     }
+  }
 
-    &:active {
-      background: $blue-1;
-      transition-duration: 0s;
+  &:not(:disabled):active {
+    background: $blue-1;
+
+    span {
+      color: $black;
+    }
+  }
+}
+
+.btn-sec {
+  background: transparent;
+  border: 1.2px solid $bluePrimary;
+
+  span {
+    color: $bluePrimary;
+  }
+
+  svg use {
+    stroke: $bluePrimary;
+  }
+
+  &:disabled {
+    border-color: $grayDisabledState;
+
+    span {
+      color: $grayDisabledState;
+    }
+
+    svg use {
+      stroke: $grayDisabledState;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:not(:disabled):hover {
+      border-color: $blueHover;
 
       span {
-        color: $black;
-        transition-duration: 0s;
+        color: $blueHover;
       }
+    }
+  }
+
+  &:not(:disabled):active {
+    border-color: $blue-1;
+
+    span {
+      color: $blue-1;
+    }
+
+    svg use {
+      stroke: $blue-1;
+    }
+  }
+}
+
+.btn-sec--white {
+  border: 1.2px solid $white;
+
+  span {
+    color: $white;
+  }
+
+  &:disabled {
+    border-color: $grayDisabledState;
+
+    span {
+      color: $grayDisabledState;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:not(:disabled):hover {
+      border-color: $bluePrimary;
+
+      span {
+        color: $bluePrimary;
+      }
+    }
+  }
+
+  &:not(:disabled):active {
+    border-color: $blue-1;
+
+    span {
+      color: $blue-1;
     }
   }
 }
 
 @media screen and (max-width: $mob) {
-  .btn-L {
+  .btn {
     width: 100%;
-    text-align: center;
     padding: 12px 28px;
 
     span {
