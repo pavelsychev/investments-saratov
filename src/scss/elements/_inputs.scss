@@ -15,7 +15,8 @@
       $transitionVisibility,
       margin 0.5s ease;
     opacity: 0;
-    visibility: 0;
+    visibility: hidden;
+    height: 0;
     margin-top: 0;
   }
 
@@ -43,7 +44,7 @@
     }
 
     input {
-      width: 360px;
+      width: 100%;
       font-weight: 500;
       color: $black;
       border: 0;
@@ -72,6 +73,7 @@
       &__hint {
         color: $red;
         opacity: 1;
+        height: auto;
         visibility: visible;
         margin-top: 8px;
       }

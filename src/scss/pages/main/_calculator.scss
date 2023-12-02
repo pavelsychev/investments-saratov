@@ -1,0 +1,193 @@
+.calculator {
+  @include showDesc();
+
+  &__titles {
+    @extend %flexCenterBetween;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    color: $black;
+  }
+
+  &__subtitle {
+    @extend %mainTxt;
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  &__form {
+    border-radius: 4px;
+    background: $white;
+    padding: 50px;
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__blocks {
+    @extend %flexStart;
+    column-gap: 20px;
+  }
+
+  &__block {
+    flex-shrink: 0;
+    flex: 0 0 calc(50% - 20px / 2);
+  }
+
+  &__block-title {
+    margin-bottom: 20px;
+    @extend %subheader;
+  }
+
+  &__btn {
+    margin: 0 0 0 auto;
+  }
+
+  &__items {
+    @extend %flexCenterStart;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  &__item {
+    label {
+      padding: 11px 16px;
+      border-radius: 4px;
+      background-color: $bgGreyLight;
+      @extend %flexCenter;
+      column-gap: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: $transitionBorder;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked + label {
+      border-color: $bluePrimary;
+
+      span {
+        color: $bluePrimary;
+      }
+
+      svg use {
+        stroke: $bluePrimary;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+      @include sizes(20px, 20px);
+
+      use {
+        stroke: $black;
+        transition: stroke 0.5s ease-in-out;
+      }
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 140%;
+      cursor: pointer;
+      transition: $transitionColor;
+    }
+
+    &.active {
+      svg use {
+        stroke: $bluePrimary;
+      }
+      label {
+        color: $bluePrimary;
+      }
+      border-color: $bluePrimary;
+    }
+  }
+
+  &__block-radiobtns {
+    @extend %flexCenterStart;
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .calculator {
+    &__titles {
+      flex-direction: column;
+      row-gap: 32px;
+      margin-bottom: 32px;
+      align-items: flex-start;
+    }
+
+    &__subtitle,
+    &__block {
+      flex: auto;
+    }
+
+    &__form {
+      padding: 40px 32px;
+      row-gap: 32px;
+    }
+
+    &__items {
+      row-gap: 16px;
+      column-gap: 16px;
+    }
+
+    &__blocks {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__block {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .calculator {
+    @include showMob();
+
+    .container {
+      padding: 0;
+    }
+
+    &__titles {
+      padding: 0 16px;
+      margin-bottom: 24px;
+    }
+
+    &__form {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    &__block-radiobtns {
+      flex-direction: column;
+      row-gap: 24px;
+      align-items: flex-start;
+    }
+
+    &__items.--hide {
+      .calculator__item:nth-child(n + 5):not(:last-child) {
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        display: none;
+      }
+    }
+
+    &__item {
+      transition: $transitionOpacity, $transitionHeight, $transitionVisibility;
+      transition: all 1s ease;
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}

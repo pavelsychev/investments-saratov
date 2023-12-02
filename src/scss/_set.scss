@@ -149,7 +149,11 @@ fieldset {
   border: 0;
 }
 
-.h2 {
+.title {
+  @extend %h1;
+}
+
+.subtitle {
   @extend %h2;
   color: $white;
 }
