@@ -1,0 +1,138 @@
+.input {
+  &__head {
+    margin-bottom: 8px;
+    @extend %secondaryTextRegular;
+    color: $black;
+  }
+
+  &__hint {
+    color: $greyTxt;
+    @extend %secondaryTextRegular;
+    transition:
+      $transitionColor,
+      $transitionOpacity,
+      $transitionBoxShadow,
+      $transitionVisibility,
+      margin 0.5s ease;
+    opacity: 0;
+    visibility: 0;
+    margin-top: 0;
+  }
+
+  &__input {
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: $white;
+    @extend %flexCenterBetween;
+    column-gap: 8px;
+    border-radius: 4px;
+    border: 1px solid $inputGreyStroke;
+    transition: $transitionBorder, $transitionBoxShadow;
+
+    button svg {
+      @include sizes(20px, 20px);
+      stroke: $greyTxt;
+      transition: stroke 0.5s ease;
+    }
+
+    input,
+    input::placeholder {
+      @extend %regular16;
+      transition: $transitionColor;
+    }
+
+    input {
+      width: 360px;
+      font-weight: 500;
+      color: $black;
+      border: 0;
+      background-color: transparent;
+      color: $black;
+
+      &:disabled {
+        input,
+        input::placeholder {
+          color: $stateDisabled;
+        }
+
+        & + button svg {
+          stroke: $stateDisabled;
+        }
+      }
+
+      &::placeholder {
+        color: $greyTxt;
+      }
+    }
+  }
+
+  &.--error {
+    .input {
+      &__hint {
+        color: $red;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 8px;
+      }
+
+      &__input {
+        border-radius: 4px;
+        // border-color: $red;
+        // box-shadow: 0px 0px 0px 3px #fddddc;
+
+        button svg {
+          stroke: $red;
+        }
+
+        input,
+        input::placeholder {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  &.--disabled {
+    .input {
+      &__input {
+        border-radius: 4px;
+        border-color: $inputGreyStroke;
+      }
+
+      button svg {
+        stroke: $stateDisabled;
+      }
+
+      input,
+      input::placeholder {
+        color: $stateDisabled;
+      }
+
+      &__head,
+      &__hint {
+        color: $stateDisabled;
+      }
+    }
+  }
+
+  &.--focus {
+    .input {
+      &__input {
+        border-radius: 4px;
+        border-color: $bluePrimary;
+        box-shadow: 0px 0px 0px 3px #dcedff;
+        color: $black;
+      }
+    }
+
+    &.--error {
+      .input {
+        &__input {
+          border-color: $red;
+          box-shadow: 0px 0px 0px 3px #fddddc;
+        }
+      }
+    }
+  }
+}

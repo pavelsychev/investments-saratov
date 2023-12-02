@@ -1,0 +1,129 @@
+.textarea {
+  width: 280px;
+
+  &__head {
+    margin-bottom: 8px;
+    @extend %secondaryTextRegular;
+    color: $black;
+  }
+
+  &__hint {
+    margin-top: 8px;
+    color: $greyTxt;
+    @extend %secondaryTextRegular;
+    transition: $transitionColor;
+    transition:
+      $transitionColor,
+      $transitionOpacity,
+      $transitionBoxShadow,
+      $transitionVisibility,
+      margin 0.5s ease;
+    opacity: 0;
+    visibility: 0;
+    margin-top: 0;
+  }
+
+  &__textarea {
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: $white;
+    @extend %flexCenterStart;
+    column-gap: 8px;
+    border-radius: 4px;
+    border: 1px solid $inputGreyStroke;
+    transition: $transitionBorder, $transitionBoxShadow;
+
+    textarea,
+    textarea::placeholder {
+      @extend %regular16;
+      transition: $transitionColor;
+    }
+
+    textarea {
+      @include sizes(360px, 124px);
+      color: $black;
+      font-weight: 500;
+      border: 0;
+      background-color: transparent;
+      color: $black;
+      @include noScrollLine();
+
+      &::placeholder {
+        color: $greyTxt;
+      }
+
+      &:disabled {
+        textarea,
+        textarea::placeholder {
+          color: $stateDisabled;
+        }
+
+        & + button svg {
+          stroke: $stateDisabled;
+        }
+      }
+    }
+  }
+
+  &.--error {
+    .textarea {
+      &__hint {
+        color: $red;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 8px;
+      }
+
+      &__textarea {
+        border-radius: 4px;
+        // border-color: $red;
+        // box-shadow: 0px 0px 0px 3px #fddddc;
+
+        textarea,
+        textarea::placeholder {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  &.--disabled {
+    .textarea {
+      &__textarea {
+        border-radius: 4px;
+        border-color: $inputGreyStroke;
+      }
+
+      textarea,
+      textarea::placeholder {
+        color: $stateDisabled;
+      }
+
+      &__head,
+      &__hint {
+        color: $stateDisabled;
+      }
+    }
+  }
+
+  &.--focus {
+    .textarea {
+      &__textarea {
+        border-radius: 4px;
+        border-color: $bluePrimary;
+        box-shadow: 0px 0px 0px 3px #dcedff;
+        color: $black;
+      }
+    }
+
+    &.--error {
+      .textarea {
+        &__textarea {
+          border-color: $red;
+          box-shadow: 0px 0px 0px 3px #fddddc;
+        }
+      }
+    }
+  }
+}
