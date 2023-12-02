@@ -1,12 +1,8 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Инвестиционный портал Саратовской области</title>
-  </head>
+  @@include('html/templates/head.html', { 'title': "Инвестиционный портал Саратовской области" })
 
-  <body>
+  <body class="index">
     <div class="base">
       <h1>Инвестиционный портал Саратовской области</h1>
       <h2>Cтраницы:</h2>
@@ -16,7 +12,11 @@
         </li>
       </ol>
       <h2>Модальные окна:</h2>
-      <ol></ol>
+      <ol>
+        <li>
+          <button type="button" data-modal-el="write-request">Написать обращение</button>
+        </li>
+      </ol>
     </div>
   </body>
 
@@ -32,7 +32,7 @@
     }
 
     html,
-    body {
+    .index body {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -42,11 +42,7 @@
       color: #212121;
     }
 
-    html {
-      font-size: 0.5208335vw;
-    }
-
-    body {
+    .index body {
       padding: 3rem 0;
       font-family: 'Raleway';
       font-size: 100%;
@@ -56,57 +52,61 @@
       user-select: none;
     }
 
-    ul,
-    ol {
+    .base ul,
+    .base ol {
       margin-bottom: 12rem;
     }
 
-    ul li,
-    ol li {
+    .base ul li,
+    .base ol li {
       font-size: 2.4rem;
       list-style: none;
     }
 
-    ol {
+    .base ol {
       counter-reset: list;
     }
 
-    ol > li:before {
+    .base ol > li:before {
       content: '(' counter(list) ') ';
       counter-increment: list;
     }
 
-    li {
+    .base li {
       margin-bottom: 2rem;
       font-size: 2.4rem;
     }
 
-    a {
+    .base a,
+    .base button {
       text-decoration: none;
     }
 
-    a {
+    .base a,
+    .base button {
       color: #212121;
       transition: color 0.5s ease;
     }
 
-    a:hover {
+    .base a:hover,
+    .base button:hover {
       text-decoration: none;
       color: #000;
     }
 
-    a:hover::before {
+    .base a:hover::before,
+    .base button:hover::before {
       color: #000;
     }
 
-    h1 {
+    .base h1 {
       margin-bottom: 7rem;
       font-size: 7rem;
       font-weight: 300;
       text-align: center;
     }
 
-    h2 {
+    .base h2 {
       margin-bottom: 2.5rem;
       font-size: 3.6rem;
       font-weight: 300;
@@ -126,5 +126,6 @@
     }
   </style>
 
+  @@include('html/templates/modals.html')
   <script src="./js/app.min.js"></script>
 </html>

@@ -1,0 +1,241 @@
+.modal {
+  @extend %fullSize;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 14, 14, 0.6);
+  backdrop-filter: blur(2px);
+  overflow: auto;
+  z-index: -100;
+  opacity: 0;
+  transition:
+    opacity 500ms,
+    z-index 250ms;
+
+  &.active {
+    z-index: 50000;
+    opacity: 1;
+    transition:
+      opacity 500ms,
+      z-index 1ms;
+
+    .modal__inner {
+      transform: scale(1);
+      opacity: 1;
+      transition:
+        transform 700ms,
+        opacity 250ms;
+    }
+  }
+
+  &__inner {
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    transform: scale(0.1);
+    opacity: 0;
+    transition:
+      transform 700ms,
+      opacity 250ms;
+  }
+
+  &__content {
+    border-radius: 4px;
+    background-color: $white;
+    // display: flex;
+
+    // 		opacity: 0;
+    // 			// visibility: hidden;
+    // 			transition: $transitionOpacity, $transitionVisibility;
+
+    // 			&.active {
+    // 				display: flex;
+    // 				opacity: 1;
+    // 				// visibility: visible
+    // 			}
+  }
+
+  &__close {
+    @include sizes(24px, 24px);
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    cursor: pointer;
+    transition: stroke 0.5s ease;
+
+    svg {
+      @extend %fullSize;
+      stroke: $greyTxt;
+    }
+
+    &:hover {
+      svg {
+        stroke: $black;
+      }
+    }
+  }
+
+  &__close svg {
+    @extend %fullSize;
+    object-fit: contain;
+  }
+}
+
+.modal-write {
+  padding: 50px 60px;
+  width: 837px;
+  @extend %flexColumn;
+  row-gap: 40px;
+
+  &__content {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h3;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    @extend %secondaryTextRegular;
+  }
+
+  &__form {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__block {
+    @extend %flexStart;
+    column-gap: 20px;
+  }
+
+  &__block-input {
+    flex: 0 0 calc(50% - 20px / 2);
+  }
+
+  &__btns {
+    @extend %flexCenterStart;
+    column-gap: 16px;
+  }
+
+  &__btns-desc {
+    width: 390px;
+    @extend %regular16;
+
+    a {
+      color: $bluePrimary;
+      border-bottom: 1px solid;
+      transition: $transitionBorder, $transitionColor;
+
+      &:hover {
+        border-color: transparent;
+        color: $black;
+      }
+    }
+  }
+
+  &.--success {
+    width: 472px;
+    align-items: center;
+
+    .modal-write {
+      &__title {
+        margin-bottom: 0;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 140%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .modal-write {
+    width: 534px;
+    row-gap: 32px;
+
+    &__content {
+      row-gap: 32px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__block {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+
+    &__block-input {
+      flex: auto;
+      width: 100%;
+    }
+
+    &__btns {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 16px;
+
+      .btn-def {
+        padding: 12px 28px;
+        width: 100%;
+      }
+    }
+
+    &__btns-desc {
+      line-height: normal;
+      font-size: 14px;
+      width: 350px;
+    }
+
+    &.--success {
+      row-gap: 32px;
+
+      .btn-def {
+        padding: 12px 28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .modal-write {
+    width: 100%;
+    padding: 80px 16px;
+
+    &__btns-desc {
+      width: 95%;
+    }
+
+    &__block {
+      row-gap: 16px;
+    }
+
+    .textarea__textarea textarea::placeholder {
+      width: 300px;
+    }
+
+    &.--success {
+      width: 328px;
+      padding: 50px 20px 40px;
+
+      .modal-write__title {
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+      }
+
+      .btn-def {
+        padding: 10px 16px;
+      }
+    }
+  }
+}

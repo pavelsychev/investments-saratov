@@ -1,6 +1,7 @@
 .dropdown {
   position: relative;
   width: 100%;
+  cursor: pointer;
 
   &__btn {
     transition: $transitionTransform;
@@ -21,16 +22,15 @@
   }
 
   &__content {
+    @extend %hidden;
+    @extend %flexColumn;
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
     background: $white;
-    @extend %flexColumn;
     transition: all 0.5s ease;
     width: 100%;
     position: absolute;
     z-index: -1;
     margin-top: 4px;
-    opacity: 0;
-    visibility: hidden;
     padding: 4px 0;
     height: 160px;
     max-height: 0;
@@ -38,10 +38,10 @@
   }
 
   &__items {
+    @include noScrollLine();
     max-height: 160px;
     overflow-y: auto;
     width: 100%;
-    @include noScrollLine();
   }
 
   &__item {
@@ -57,8 +57,8 @@
     }
 
     label {
-      transition: $transitionColor;
       @extend %secondaryTextRegular;
+      transition: $transitionColor;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -75,10 +75,9 @@
   &.--active {
     .dropdown {
       &__content {
-        opacity: 1;
+        @extend %visible;
         max-height: 160px;
         z-index: 10;
-        visibility: visible;
       }
 
       &__btn {
@@ -145,6 +144,7 @@
 
   .dropdown {
     &__headline {
+      @extend %secondaryTextRegular;
       margin-bottom: 8px;
     }
 

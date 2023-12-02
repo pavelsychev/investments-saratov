@@ -28,8 +28,8 @@
 }
 
 .btn--icon {
-  padding: 12px 20px;
   @extend %flexCenterBetween;
+  padding: 12px 20px;
   column-gap: 4px;
 }
 

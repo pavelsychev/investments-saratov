@@ -43,10 +43,11 @@ function addActiveFirstStepsOnLoad() {
 
 function clickCalculatorBtn() {
   const btn = document.querySelector('.js-calc-items');
-  const btnText = btn.querySelector('span');
-  const content = document.querySelector('.js-calc-items-content');
 
   if (btn && window.innerWidth < 768) {
+    const btnText = btn.querySelector('span');
+    const content = document.querySelector('.js-calc-items-content');
+
     btn.addEventListener('click', () => {
       if (btn.classList.contains('--hide')) {
         btnText.textContent = 'Показать еще';

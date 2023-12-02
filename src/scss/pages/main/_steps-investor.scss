@@ -39,20 +39,17 @@
       }
 
       .steps-investor__item-content {
-        opacity: 1;
-        visibility: visible;
+        @extend %visible;
       }
 
       .steps-investor__item-btn {
         svg {
           &:first-child {
-            opacity: 0;
-            visibility: hidden;
+            @extend %hidden;
           }
 
           &:last-child {
-            opacity: 1;
-            visibility: visible;
+            @extend %visible;
           }
         }
       }
@@ -69,20 +66,18 @@
     right: 32px;
 
     svg {
+      @include sizes(11px, 11px);
       position: absolute;
       top: calc(50% - 11px / 2);
       left: calc(50% - 11px / 2);
-      @include sizes(11px, 11px);
       transition: $transitionOpacity, $transitionOpacity;
 
       &:first-child {
-        opacity: 1;
-        visibility: visible;
+        @extend %visible;
       }
 
       &:last-child {
-        opacity: 0;
-        visibility: hidden;
+        @extend %hidden;
       }
     }
   }
@@ -107,9 +102,8 @@
   }
 
   &__item-content {
+    @extend %hidden;
     padding-left: 48px;
-    overflow: hidden;
-    opacity: 0;
     height: 0;
     transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
   }
@@ -127,17 +121,17 @@
     row-gap: 8px;
 
     li {
-      position: relative;
       @extend %flexStart;
+      position: relative;
       column-gap: 4px;
       font-size: 18px;
       font-weight: 400;
       line-height: 140%;
 
       &::before {
+        @include sizes(20px, 20px);
         content: '';
         background: url('../assets/img/icons/bullet.svg');
-        @include sizes(20px, 20px);
         flex-shrink: 0;
       }
     }

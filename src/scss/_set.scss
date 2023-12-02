@@ -163,6 +163,7 @@ fieldset {
 }
 
 .container {
+  @include showDesc();
   max-width: 1620px;
   margin: 0 auto;
   padding: 0 40px;
@@ -194,6 +195,7 @@ fieldset {
 
 @media screen and (max-width: $mob) {
   .container {
+    @include showMob();
     padding: 0 16px;
   }
 

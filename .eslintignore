@@ -3,3 +3,4 @@ _locks
 _logs
 anonymous-cli-metrics.json
 src/js/modules/gulp.js
+src/js/scripts/modal.js

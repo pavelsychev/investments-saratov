@@ -15,16 +15,18 @@ function inputsDef() {
       const inp = input.querySelector('input');
       const inpBlock = input.querySelector('.input__input');
 
-      inpBlock.addEventListener('click', () => inp.focus());
+      if (inpBlock) {
+        inpBlock.addEventListener('click', () => inp.focus());
 
-      inp.addEventListener('focus', () => input.classList.add('--focus'));
-      inp.addEventListener('blur', () => input.classList.remove('--focus'));
+        inp.addEventListener('focus', () => input.classList.add('--focus'));
+        inp.addEventListener('blur', () => input.classList.remove('--focus'));
 
-      inp.addEventListener('input', () => {
-        if (inp.value.length >= 1) {
-          inp.classList.remove('--filled');
-        }
-      });
+        inp.addEventListener('input', () => {
+          if (inp.value.length >= 1) {
+            inp.classList.remove('--filled');
+          }
+        });
+      }
     });
   }
 }
@@ -54,5 +56,22 @@ function textareaDef() {
   }
 }
 
+function inputFilesAction() {
+  if (document.querySelectorAll('.input-file input[type=file]')) {
+    const inputFiles = document.querySelectorAll('.input-file');
+
+    inputFiles.forEach((inputFile) => {
+      const input = inputFile.querySelector('input');
+      const span = inputFile.querySelector('span');
+
+      input.addEventListener('change', function () {
+        const fileName = this.files[0].name;
+        span.innerHTML = fileName;
+      });
+    });
+  }
+}
+
 inputsDef();
 textareaDef();
+inputFilesAction();

@@ -1,31 +1,30 @@
 .input {
   &__head {
-    margin-bottom: 8px;
     @extend %secondaryTextRegular;
+    margin-bottom: 8px;
     color: $black;
   }
 
   &__hint {
-    color: $greyTxt;
+    @extend %hidden;
     @extend %secondaryTextRegular;
+    color: $greyTxt;
     transition:
       $transitionColor,
       $transitionOpacity,
       $transitionBoxShadow,
       $transitionVisibility,
       margin 0.5s ease;
-    opacity: 0;
-    visibility: hidden;
     height: 0;
     margin-top: 0;
   }
 
   &__input {
+    @extend %flexCenterBetween;
     cursor: pointer;
     padding: 12px;
     border-radius: 4px;
     background-color: $white;
-    @extend %flexCenterBetween;
     column-gap: 8px;
     border-radius: 4px;
     border: 1px solid $inputGreyStroke;
@@ -71,10 +70,9 @@
   &.--error {
     .input {
       &__hint {
+        @extend %visible;
         color: $red;
-        opacity: 1;
         height: auto;
-        visibility: visible;
         margin-top: 8px;
       }
 
@@ -135,6 +133,39 @@
           box-shadow: 0px 0px 0px 3px #fddddc;
         }
       }
+    }
+  }
+}
+
+.input-file {
+  input {
+    display: none;
+  }
+
+  label {
+    @extend %flexCenter;
+    cursor: pointer;
+    column-gap: 8px;
+
+    svg {
+      @include sizes(20px, 20px);
+      use {
+        stroke: $bluePrimary;
+      }
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 140%;
+      color: $bluePrimary;
+    }
+  }
+
+  &:hover {
+    svg use,
+    label span {
+      stroke: $blueHover;
     }
   }
 }

@@ -32,8 +32,7 @@
   &__slide {
     &.swiper-slide-active {
       .success-hist__slide-content {
-        opacity: 1;
-        visibility: visible;
+        @extend %visible;
       }
     }
   }
@@ -79,9 +78,8 @@
   }
 
   &__slide-content {
+    @extend %hidden;
     row-gap: 225px;
-    opacity: 0;
-    visibility: hidden;
     transition:
       visibility 1.5s ease-in-out,
       opacity 1.5s ease-in-out;

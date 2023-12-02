@@ -2,8 +2,8 @@
   position: relative;
 
   &__title {
-    max-width: 1110px;
     @extend %h1;
+    max-width: 1150px;
     color: $white;
     margin-bottom: 40px;
   }

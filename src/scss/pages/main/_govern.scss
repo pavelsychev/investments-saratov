@@ -33,10 +33,10 @@
   }
 
   &__desc-icon {
+    @include sizes(278px, 268px);
     position: absolute;
     top: -50px;
     left: 392px;
-    @include sizes(278px, 268px);
   }
 
   &__desc-quote {

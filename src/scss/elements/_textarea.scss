@@ -1,16 +1,17 @@
 .textarea {
-  width: 280px;
+  width: 100%;
 
   &__head {
+    @extend %mediumTextRegular;
     margin-bottom: 8px;
-    @extend %secondaryTextRegular;
     color: $black;
   }
 
   &__hint {
+    @extend %secondaryTextRegular;
+    @extend %hidden;
     margin-top: 8px;
     color: $greyTxt;
-    @extend %secondaryTextRegular;
     transition: $transitionColor;
     transition:
       $transitionColor,
@@ -18,13 +19,12 @@
       $transitionBoxShadow,
       $transitionVisibility,
       margin 0.5s ease;
-    opacity: 0;
-    visibility: hidden;
     margin-top: 0;
     height: 0;
   }
 
   &__textarea {
+    @include sizes(100%, 112px);
     cursor: pointer;
     padding: 11px;
     border-radius: 4px;
@@ -42,13 +42,13 @@
     }
 
     textarea {
-      @include sizes(360px, 124px);
+      @include noScrollLine();
+      @extend %fullSize;
       color: $black;
       font-weight: 500;
       border: 0;
       background-color: transparent;
       color: $black;
-      @include noScrollLine();
 
       &::placeholder {
         color: $greyTxt;
@@ -70,9 +70,8 @@
   &.--error {
     .textarea {
       &__hint {
+        @extend %visible;
         color: $red;
-        opacity: 1;
-        visibility: visible;
         margin-top: 8px;
         height: auto;
       }

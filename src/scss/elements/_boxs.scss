@@ -11,6 +11,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 140%;
+    cursor: pointer;
 
     &::before {
       @include sizes(20px, 20px);

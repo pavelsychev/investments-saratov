@@ -1,6 +1,4 @@
 .calculator {
-  @include showDesc();
-
   &__titles {
     @extend %flexCenterBetween;
     margin-bottom: 40px;
@@ -16,10 +14,10 @@
   }
 
   &__form {
+    @extend %flexColumn;
     border-radius: 4px;
     background: $white;
     padding: 50px;
-    @extend %flexColumn;
     row-gap: 40px;
   }
 
@@ -34,8 +32,8 @@
   }
 
   &__block-title {
-    margin-bottom: 20px;
     @extend %subheader;
+    margin-bottom: 20px;
   }
 
   &__btn {
@@ -51,10 +49,10 @@
 
   &__item {
     label {
+      @extend %flexCenter;
       padding: 11px 16px;
       border-radius: 4px;
       background-color: $bgGreyLight;
-      @extend %flexCenter;
       column-gap: 8px;
       border: 1px solid transparent;
       cursor: pointer;
@@ -78,8 +76,8 @@
     }
 
     svg {
-      flex-shrink: 0;
       @include sizes(20px, 20px);
+      flex-shrink: 0;
 
       use {
         stroke: $black;
@@ -150,8 +148,6 @@
 
 @media screen and (max-width: $mob) {
   .calculator {
-    @include showMob();
-
     .container {
       padding: 0;
     }
@@ -183,7 +179,6 @@
 
     &__item {
       transition: $transitionOpacity, $transitionHeight, $transitionVisibility;
-      transition: all 1s ease;
 
       span {
         font-size: 16px;
