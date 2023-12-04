@@ -5,10 +5,11 @@
 
   &__btn {
     transition: $transitionTransform;
+    @include sizes(20px, 20px);
 
     svg {
-      @include sizes(20px, 20px);
       stroke: $textIconsLightBaseSecond;
+      transition: $transitionTransform;
     }
   }
 
@@ -80,7 +81,7 @@
         z-index: 10;
       }
 
-      &__btn {
+      &__btn svg {
         transform: rotate(180deg);
       }
     }
@@ -203,32 +204,28 @@
 //   }
 // }
 
-// .dropdown-sec {
-//   .dropdown {
-//     &__header {
-//       column-gap: 4px;
-//       border: 0;
-//       background-color: 0;
-//       justify-content: flex-end;
-//       width: 100%;
-//     }
+.dropdown-sec {
+  .dropdown {
+    &__header {
+      column-gap: 4px;
+      border: 0;
+      background-color: 0;
+      justify-content: flex-end;
+      width: 100%;
+    }
 
-//     &__value {
-//       @extend %semiboldInterM;
-//     }
+    &__content {
+      border-radius: 1px;
+      // border: 1px solid $strokeLightBase;
+      // background: $backgroundLightBaseSecond;
+    }
+  }
 
-//     &__content {
-//       border-radius: 1px;
-//       border: 1px solid $strokeLightBase;
-//       background: $backgroundLightBaseSecond;
-//     }
-//   }
-
-//   &.active {
-//     .dropdown {
-//       &__value {
-//         color: $black;
-//       }
-//     }
-//   }
-// }
+  &.active {
+    .dropdown {
+      &__value {
+        color: $black;
+      }
+    }
+  }
+}

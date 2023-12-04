@@ -1166,9 +1166,10 @@ template {
 .intro__slide-img,
 .success-hist__slide-img,
 .benefits__slide-img,
-.modal__close svg,
+.header-top__logo a,
 .modal,
-.textarea__textarea textarea {
+.textarea__textarea textarea,
+svg {
   width: 100%;
   height: 100%;
 }
@@ -1178,6 +1179,8 @@ template {
 .steps-investor__item-content,
 .steps-investor__item-btn svg:last-child,
 .steps-investor__item.active .steps-investor__item-btn svg:first-child,
+.header--transparent .header-top__logo a,
+.header-top__logo a.header-top__logo--transparent,
 .textarea__hint,
 .dropdown__content,
 .input__hint {
@@ -1190,6 +1193,8 @@ template {
 .steps-investor__item-btn svg:first-child,
 .steps-investor__item.active .steps-investor__item-btn svg:last-child,
 .steps-investor__item.active .steps-investor__item-content,
+.header--transparent .header-top__logo a.header-top__logo--transparent,
+.header-top__logo a,
 .textarea.--error .textarea__hint,
 .dropdown.--active .dropdown__content,
 .input.--error .input__hint {
@@ -1207,6 +1212,8 @@ template {
 .steps-investor__items,
 .steps-investor__container,
 .governor__desc-managment,
+.header-top__phone,
+.header,
 .modal-write__form,
 .modal-write__content,
 .modal-write,
@@ -1237,6 +1244,11 @@ template {
 }
 
 .calculator__titles,
+.header-top__btns,
+.header-top__socials,
+.header-top__panel,
+.header-bottom__container,
+.header-top__content,
 .footer__bottom,
 .footer__list-title,
 .footer__lists,
@@ -1263,6 +1275,11 @@ template {
 .calculator__block-radiobtns,
 .calculator__items,
 .success-hist__slide-items,
+.header-bottom__btn,
+.header-bottom__btns,
+.header-bottom__links,
+.header-bottom__list,
+.header-top__container,
 .modal-write__btns,
 .footer__info-socials,
 .textarea__textarea {
@@ -1283,6 +1300,7 @@ template {
   line-height: 140%;
 }
 
+.header *,
 .modal-write__btns-desc,
 .footer__info-title,
 .textarea__textarea textarea,
@@ -1295,6 +1313,7 @@ template {
   line-height: 140%;
 }
 
+.header-top__dropdown .dropdown__value,
 .btn span {
   font-size: 18px;
   font-weight: 600;
@@ -1943,12 +1962,13 @@ fieldset {
 
 .dropdown__btn {
   transition: transform 0.5s ease;
+  width: 20px;
+  height: 20px;
 }
 
 .dropdown__btn svg {
-  width: 20px;
-  height: 20px;
   stroke: #858c95;
+  transition: transform 0.5s ease;
 }
 
 .dropdown__headline {
@@ -2017,7 +2037,7 @@ fieldset {
   z-index: 10;
 }
 
-.dropdown.--active .dropdown__btn {
+.dropdown.--active .dropdown__btn svg {
   transform: rotate(180deg);
 }
 
@@ -2077,6 +2097,23 @@ fieldset {
   margin-top: 10px;
   border-radius: 4px;
   border: 1px solid #dee2e7;
+}
+
+.dropdown-sec .dropdown__header {
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  border: 0;
+  background-color: 0;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.dropdown-sec .dropdown__content {
+  border-radius: 1px;
+}
+
+.dropdown-sec.active .dropdown__value {
+  color: #2f2f2f;
 }
 
 .textarea {
@@ -2507,6 +2544,179 @@ fieldset {
   font-size: 24px;
   font-weight: 600;
   line-height: 140%;
+}
+
+.header {
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background 0.5s ease-in;
+}
+
+.header * {
+  color: #2f2f2f;
+  transition: color 0.25s ease, stroke 0.25s ease, fill 0.25s ease, border 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.header svg use {
+  stroke: #2f2f2f;
+}
+
+.header button:not(.dropdown__btn):hover,
+.header a:not(.header-top__social):hover {
+  color: #2661d4;
+}
+
+.header button:not(.dropdown__btn):hover svg use,
+.header a:not(.header-top__social):hover svg use {
+  stroke: #2661d4;
+}
+
+.header button:not(.dropdown__btn):hover p,
+.header a:not(.header-top__social):hover p {
+  color: #2661d4;
+}
+
+.header-top,
+.header-bottom {
+  border-bottom: 1px solid #dee2e7;
+}
+
+.header-top__logo {
+  flex-shrink: 0;
+  position: relative;
+  width: 235px;
+  height: 64px;
+  margin-right: 20px;
+}
+
+.header-top__logo a {
+  position: absolute;
+}
+
+.header-top__content {
+  border-left: 1px solid #dee2e7;
+  padding: 16px 0;
+}
+
+.header-bottom {
+  padding: 16px 0;
+}
+
+.header-top__phone {
+  row-gap: 4px;
+  margin-left: 24px;
+}
+
+.header-top__content {
+  width: 100%;
+}
+
+.header-top__panel {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.header-top__socials {
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+}
+
+.header-top__socials svg use {
+  fill: #2f2f2f;
+  stroke: none;
+}
+
+.header-top__socials a {
+  width: 32px;
+  height: 32px;
+}
+
+.header-top__socials a:hover svg use {
+  fill: #2661d4;
+}
+
+.header-top__btns {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.header-top__btns-search {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.header-top__dropdown .dropdown__content {
+  width: auto;
+  height: auto;
+}
+
+.header-top__dropdown .dropdown__value {
+  flex-shrink: 0;
+}
+
+.header-top__dropdown .dropdown__header {
+  align-items: baseline;
+}
+
+.header-top__dropdown .dropdown__btn {
+  width: 12px;
+  height: 12px;
+}
+
+.header-bottom__links,
+.header-bottom__list {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+
+.header-bottom__btn-burg {
+  width: 32px;
+  height: 32px;
+}
+
+.header-bottom__btns {
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+
+.header-bottom__btn {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.header-bottom__btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header--transparent {
+  background-color: transparent;
+}
+
+.header--transparent * {
+  color: #ffffff;
+}
+
+.header--transparent svg use {
+  stroke: #ffffff;
+}
+
+.header--transparent .header-top__socials svg use {
+  fill: #ffffff;
+  stroke: none;
+}
+
+.header--transparent .btn-sec {
+  border-color: #ffffff;
+}
+
+.header--transparent .btn-sec span {
+  color: #ffffff;
 }
 
 .governor {
@@ -3096,6 +3306,17 @@ fieldset {
     padding-bottom: 20px;
   }
 
+  .header-bottom__links,
+  .header-bottom__list {
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+
+  .header-bottom__list li:nth-child(2),
+  .header-bottom__list li:nth-child(6) {
+    display: none;
+  }
+
   .governor__container {
     padding: 140px 0;
   }
@@ -3263,6 +3484,21 @@ fieldset {
 
   .modal-write.--success .btn-def {
     padding: 12px 28px;
+  }
+
+  .header-bottom__menu,
+  .header-top__socials {
+    display: none;
+  }
+
+  .header-top__logo {
+    width: 39px;
+    height: 62px;
+  }
+
+  .header-bottom__btns {
+    -moz-column-gap: 24px;
+         column-gap: 24px;
   }
 
   .governor__container {
@@ -3621,6 +3857,36 @@ fieldset {
 
   .modal-write.--success .btn-def {
     padding: 10px 16px;
+  }
+
+  .header-bottom,
+  .header-top__panel {
+    display: none;
+  }
+
+  .header-top__container {
+    padding: 16px 0;
+  }
+
+  .header-top__logo {
+    margin: 0;
+  }
+
+  .header-top__content {
+    justify-content: center;
+    padding: 0;
+    border: 0;
+  }
+
+  .header-top__phone {
+    margin: 0;
+    align-items: center;
+  }
+
+  .header-top__burger {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
   }
 
   .governor__container {

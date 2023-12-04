@@ -4,13 +4,157 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231202213833" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231202213833" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231203140150" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231203140150" />
 </head>
 
 
   <body>
-    <main>
+    <header class="header header--transparent">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__container">
+        <div class="header-top__logo logo">
+          <a href="./main.html" class="header-top__logo--transparent">
+            <picture>
+              <source media="(min-width: 1365px)" srcset="assets/img/icons/logo.svg" />
+              <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-sm.svg" />
+              <img src="assets/img/icons/logo.svg" alt="logo" />
+            </picture>
+          </a>
+          <a href="./main.html">
+            <picture>
+              <source media="(min-width: 1365px)" srcset="assets/img/icons/logo-2.svg" />
+              <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-2-sm.svg" />
+              <img src="assets/img/icons/logo-2.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <div class="header-top__content">
+          <div class="header-top__phone">
+            <a href="tel:+78452695262">+7 (8452) 69 52 62</a>
+            <p>Горячая линия</p>
+          </div>
+          <div class="header-top__panel">
+            <div class="header-top__btns">
+              <button type="button" class="header-top__btns-search">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#search"></use>
+                </svg>
+              </button>
+              <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
+                <div class="dropdown__header js-dropdown-inner">
+                  <div class="dropdown__value js-dropdown-value">RU</div>
+                  <button type="button" class="dropdown__btn">
+                    <svg>
+                      <use xlink:href="assets/img/icons/icons.svg#arrow-caret-down"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="dropdown__content">
+                  <div class="dropdown__items">
+                    <div class="dropdown__item js-dropdown-item active">
+                      <input id="ru" type="radio" name="lang" value="lang-1" checked />
+                      <label for="ru">RU</label>
+                    </div>
+                    <div class="dropdown__item js-dropdown-item">
+                      <input id="lang-2" type="radio" name="lang" value="lang-2" />
+                      <label for="lang-2">EN</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-top__socials">
+              <a href="#" class="header-top__social">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#vk-2"></use>
+                </svg>
+              </a>
+              <a href="#" class="header-top__social">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#tg-2"></use>
+                </svg>
+              </a>
+              <a href="#" class="header-top__social">
+                <svg>
+                  <use xlink:href="assets/img/icons/icons.svg#odn-2"></use>
+                </svg>
+              </a>
+            </div>
+            <a href="#" class="header-top__btn btn btn-sec">
+              <span>Линия прямых обращений</span>
+            </a>
+          </div>
+        </div>
+        <button type="button" class="header-top__burger --mob">
+          <svg>
+            <use xlink:href="assets/img/icons/icons.svg#list"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container">
+      <div class="header-bottom__container">
+        <div class="header-bottom__links">
+          <button type="button" class="header-bottom__btn-burg">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#list"></use>
+            </svg>
+          </button>
+          <nav class="header-bottom__menu">
+            <ul class="header-bottom__list">
+              <li>
+                <a href="#">О регионе</a>
+              </li>
+              <li>
+                <a href="#">Инвестстандарт</a>
+              </li>
+              <li>
+                <a href="#">Инвестору</a>
+              </li>
+              <li>
+                <a href="#">Поддержка</a>
+              </li>
+              <li>
+                <a href="#">Площадки</a>
+              </li>
+              <li>
+                <a href="#">ГЧП</a>
+              </li>
+              <li>
+                <a href="#">Документы</a>
+              </li>
+              <li>
+                <a href="#">Медиа</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-bottom__btns">
+          <a href="#" class="header-bottom__btn">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#map-pinned"></use>
+            </svg>
+            <p>Инвестиционная карта</p>
+          </a>
+          <a href="#" class="header-bottom__btn">
+            <svg>
+              <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
+            </svg>
+            <p>Войти</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ <main>
   <section class="section intro">
   <div class="intro__container">
     <div class="container">
@@ -919,7 +1063,8 @@
 </section>
 
 </main>
- <footer class="footer">
+
+    <footer class="footer">
   <div class="container">
     <div class="footer__container">
       <div class="footer__top">
@@ -1086,8 +1231,7 @@
     </div>
   </div>
 </footer>
-
-    <!--Модалка Написать обращение-->
+ <!--Модалка Написать обращение-->
 <div class="modal close-x" data-modal="write-request">
   <div class="modal__inner">
     <div class="modal__content modal-write --main">
@@ -1219,8 +1363,9 @@
     </div>
   </div>
 </div>
- <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231202213833"></script>
-<script src="js/app.min.js?_v=20231202213833"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231203140150"></script>
+<script src="js/app.min.js?_v=20231203140150"></script>
 
   </body>
 </html>
