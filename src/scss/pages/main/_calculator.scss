@@ -48,7 +48,8 @@
   }
 
   &__item {
-    label {
+    label,
+    div {
       @extend %flexCenter;
       padding: 11px 16px;
       border-radius: 4px;

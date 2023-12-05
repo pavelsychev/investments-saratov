@@ -20,12 +20,6 @@ function inputsDef() {
 
         inp.addEventListener('focus', () => input.classList.add('--focus'));
         inp.addEventListener('blur', () => input.classList.remove('--focus'));
-
-        inp.addEventListener('input', () => {
-          if (inp.value.length >= 1) {
-            inp.classList.remove('--filled');
-          }
-        });
       }
     });
   }

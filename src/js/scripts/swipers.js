@@ -60,7 +60,7 @@ function initIntroSlider() {
       modules: [Pagination, Navigation, Autoplay],
       slidesPerView: 1,
       loop: true,
-      // autoplay: true,
+      autoplay: true,
       autoplay: {
         delay: 4000,
       },

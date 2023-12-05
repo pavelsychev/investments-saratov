@@ -1226,6 +1226,7 @@ svg {
 }
 
 .calculator__item label,
+.calculator__item div,
 .input-file label,
 .slider-navigation__fraction,
 .slider-navigation__btns-next,
@@ -2038,6 +2039,7 @@ fieldset {
   align-items: center;
   width: 100%;
   overflow: hidden;
+  color: #2f2f2f;
 }
 
 .dropdown__value {
@@ -2262,7 +2264,6 @@ fieldset {
   display: inline-block;
   position: relative;
   left: 0;
-  transition: background 0.5s ease;
   background-size: cover;
   background: #ffffff;
 }
@@ -2281,7 +2282,7 @@ fieldset {
   background-size: 12px 12px;
   background-repeat: no-repeat;
   border-color: #2d6fd0;
-  background-image: url("@img/icons/icons.svg#radio-circle");
+  background-image: url("../assets/img/icons/radio-fill.svg");
 }
 
 .radiobox-S label::before {
@@ -2314,8 +2315,42 @@ fieldset {
   background-size: 14px 14px;
 }
 
+.simplebar-track.simplebar-vertical {
+  background-color: #f4f6fb;
+  width: 4px;
+  border-radius: 10rem;
+  margin-right: 4px;
+}
+
+.simplebar-scrollbar::before {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: #dee2e7;
+  border-radius: 4px;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  top: 0;
+  bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
+}
+
 .footer {
   background-color: #212121;
+}
+
+.footer a {
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
 }
 
 .footer__top {
@@ -2605,7 +2640,7 @@ fieldset {
 
 .header * {
   color: #2f2f2f;
-  transition: color 0.25s ease, stroke 0.25s ease, fill 0.25s ease, border 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
+  transition: color 0.25s ease, stroke 0.25s ease, fill 0.25s ease, border 0.25s ease, opacity 0.25s ease, visibility 0.25s ease, height 0.5s ease, max-heigth 0.5s ease, padding 0.5s ease;
 }
 
 .header svg use {
@@ -2615,6 +2650,7 @@ fieldset {
 .header button:not(.dropdown__btn):hover,
 .header a:not(.header-top__social):hover {
   color: #2661d4;
+  font-weight: 600;
 }
 
 .header button:not(.dropdown__btn):hover svg use,
@@ -2700,6 +2736,7 @@ fieldset {
 .header-top__dropdown .dropdown__content {
   width: auto;
   height: auto;
+  transition: all 0.5s ease;
 }
 
 .header-top__dropdown .dropdown__value {
@@ -3211,7 +3248,8 @@ fieldset {
        column-gap: 20px;
 }
 
-.calculator__item label {
+.calculator__item label,
+.calculator__item div {
   padding: 11px 16px;
   border-radius: 4px;
   background-color: #f5f6f6;

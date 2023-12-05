@@ -17,7 +17,10 @@
       fill 0.25s ease,
       border 0.25s ease,
       opacity 0.25s ease,
-      visibility 0.25s ease;
+      visibility 0.25s ease,
+      height 0.5s ease,
+      max-heigth 0.5s ease,
+      padding 0.5s ease;
   }
 
   svg use {
@@ -27,6 +30,7 @@
   button:not(.dropdown__btn):hover,
   a:not(.header-top__social):hover {
     color: $blueHover;
+    font-weight: 600;
 
     svg use {
       stroke: $blueHover;
@@ -126,6 +130,7 @@
     .dropdown {
       &__content {
         @include sizes(auto, auto);
+        transition: all 0.5s ease;
       }
 
       &__value {

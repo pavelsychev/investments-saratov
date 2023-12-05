@@ -1,6 +1,13 @@
 .footer {
   background-color: $bgDark;
 
+  a {
+    transition: color 0.3s ease;
+    &:hover {
+      color: $white;
+    }
+  }
+
   &__top {
     @extend %flexStartBetween;
     padding: 100px 0 45px;
