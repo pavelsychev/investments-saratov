@@ -16,6 +16,18 @@
         <li>
           <button type="button" data-modal-el="write-request">Написать обращение</button>
         </li>
+        <li>
+          <button type="button" data-modal-el="account-create-success">Учетная запись создана успешна</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="email-confirmed">Ваш email подтвержден</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="request-sent">Ваше обращение отправлено</button>
+        </li>
+        <li>
+          <button type="button" data-modal-el="exit-confirmation">Подтверждение выхода</button>
+        </li>
       </ol>
     </div>
   </body>
@@ -65,6 +77,9 @@
 
     .base ol {
       counter-reset: list;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .base ol > li:before {

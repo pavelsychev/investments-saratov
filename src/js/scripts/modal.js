@@ -82,3 +82,11 @@ class Modal {
 }
 
 const writeRequest = document.querySelector('[data-modal="write-request"]') ? new Modal('write-request') : null;
+const accountCreateSuccess = document.querySelector('[data-modal="account-create-success"]')
+  ? new Modal('account-create-success')
+  : null;
+const emailConfirmed = document.querySelector('[data-modal="email-confirmed"]') ? new Modal('email-confirmed') : null;
+const requestSent = document.querySelector('[data-modal="request-sent"]') ? new Modal('request-sent') : null;
+const exitConfirmation = document.querySelector('[data-modal="exit-confirmation"]')
+  ? new Modal('exit-confirmation')
+  : null;

@@ -10,6 +10,16 @@
   line-height: 140%;
 }
 
+%regular18 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
 %semibold40 {
   font-size: 40px;
   font-weight: 600;

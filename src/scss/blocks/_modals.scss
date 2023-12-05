@@ -154,6 +154,86 @@
   }
 }
 
+.modal-pers-cab {
+  @extend %flexColumn;
+  align-items: center;
+  row-gap: 40px;
+  padding: 50px 60px;
+
+  &__title {
+    @extend %flexCenterStart;
+    column-gap: 8px;
+    width: 100%;
+
+    svg {
+      @include sizes(32px, 32px);
+    }
+
+    p {
+      @extend %subheader;
+    }
+  }
+
+  &__content {
+    @extend %flexColumn;
+    row-gap: 20px;
+  }
+
+  &__txt {
+    @extend %regular18;
+
+    a {
+      color: $bluePrimary;
+      transition: $transitionColor;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &__btns {
+    @extend %flexCenterEnd;
+    column-gap: 20px;
+  }
+
+  &--create,
+  &--sent {
+    width: 595px;
+  }
+
+  &--sent {
+    row-gap: 24px;
+    align-items: flex-start;
+
+    .modal-pers-cab__btn {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &--exit {
+    width: 502px;
+
+    .modal-pers-cab__btns {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .modal-pers-cab--succes {
+    &__btn {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  .modal-pers-cab--sent {
+    row-gap: 40px;
+    width: 500px;
+    padding: 50px 54px;
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .modal-write {
     width: 534px;
@@ -202,6 +282,35 @@
       }
     }
   }
+
+  .modal-pers-cab {
+    &__content {
+      row-gap: 16px;
+    }
+
+    &__btn {
+      padding: 12px 28px;
+    }
+
+    &--create {
+      padding: 40px;
+      row-gap: 32px;
+    }
+
+						    &--email {
+						    	padding: 50px 40p;
+						    }
+
+    &--sent {
+      row-gap: 32px;
+      padding: 40px;
+    }
+
+    &--exit {
+      padding: 40px;
+      row-gap: 32px;
+    }
+  }
 }
 
 @media screen and (max-width: $mob) {
@@ -233,6 +342,58 @@
 
       .btn-def {
         padding: 10px 16px;
+      }
+    }
+  }
+
+  .modal-pers-cab {
+    width: 328px;
+
+    &__title {
+      flex-direction: column;
+      row-gap: 8px;
+      align-items: flex-start;
+    }
+
+    &__txt {
+      @extend %regular18;
+
+      a {
+        color: $bluePrimary;
+        transition: $transitionColor;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    &--create {
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+
+    &--email {
+      padding: 50px 20px 40px;
+    }
+
+    &--sent {
+      row-gap: 32px;
+      padding: 40px 20px;
+
+      .modal-pers-cab__title p {
+        font-size: 24px;
+      }
+    }
+
+    &--exit {
+      padding-left: 24px;
+      padding-right: 24px;
+
+      .modal-pers-cab__btns {
+        flex-direction: column;
+        row-gap: 16px;
+        width: 100%;
       }
     }
   }
