@@ -60,7 +60,7 @@ function initIntroSlider() {
       modules: [Pagination, Navigation, Autoplay],
       slidesPerView: 1,
       loop: true,
-      autoplay: true,
+      // autoplay: true,
       autoplay: {
         delay: 4000,
       },
@@ -77,10 +77,30 @@ function initIntroSlider() {
   }
 }
 
+function initNewsSlider() {
+  if (document.querySelector('.news__swiper')) {
+    const slider = document.querySelector('.news__swiper');
+    const btnPrev = slider.parentElement.querySelector('.slider-navigation__btns-prev');
+    const btnNext = slider.parentElement.querySelector('.slider-navigation__btns-next');
+
+    new Swiper(slider, {
+      modules: [Navigation],
+      slidesPerView: 1,
+      loop: true,
+      speed: 1500,
+      navigation: {
+        nextEl: btnNext,
+        prevEl: btnPrev,
+      },
+    });
+  }
+}
+
 function initSliders() {
   initBenefitsSlider();
   initSuccessHistSlider();
   initIntroSlider();
+  initNewsSlider();
 }
 
 document.addEventListener('DOMContentLoaded', initSliders);
