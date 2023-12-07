@@ -1,0 +1,68 @@
+.auth {
+  &__socials {
+    @extend %flexColumn;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    padding-top: 40px;
+    border-top: 1px solid #d3dce4;
+    margin-top: 40px;
+  }
+
+  &__socials-title {
+    @extend %regular16;
+    color: $black;
+  }
+
+  &__socials-items {
+    @extend %flexCenter;
+    column-gap: 20px;
+
+    a {
+      @include sizes(40px, 40px);
+    }
+  }
+
+  &__form-input {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form-checkboxes {
+    @extend %flexCenterBetween;
+    margin-bottom: 43px;
+
+    div span {
+      @extend %secondaryTextRegular;
+      color: $bluePrimary;
+
+      &:hover {
+        color: $black;
+      }
+    }
+
+    label {
+      font-size: 14px;
+    }
+  }
+
+  &__socials {
+    padding-top: 32px;
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .auth {
+    &__form-input {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__form-checkboxes {
+      margin-bottom: 28px;
+    }
+  }
+}

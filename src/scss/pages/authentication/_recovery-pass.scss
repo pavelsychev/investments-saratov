@@ -1,0 +1,60 @@
+.recovery-pass {
+  &__back {
+    margin-bottom: 48px;
+    @extend %flexCenter;
+    column-gap: 4px;
+
+    svg {
+      @include sizes(20px, 20px);
+    }
+
+    span {
+      @extend %regular16;
+      color: $black;
+    }
+  }
+
+  &__title {
+    @extend %subheader;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    @extend %secondaryTextRegular;
+    margin-bottom: 32px;
+    line-height: 120%;
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .recovery-pass {
+    &__back {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .recovery-pass {
+    &__back {
+      margin-bottom: 30px;
+    }
+
+    &__btn {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .recovery-pass {
+    &__text {
+      line-height: 130%;
+      margin-bottom: 27px;
+    }
+  }
+}

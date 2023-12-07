@@ -2,7 +2,11 @@
 export const TABLET = 1366;
 export const MOB = 768;
 
-// News count cards
-export const FIVE_CARDS = 5;
-export const THREE_CARDS = 3;
-export const ONE_CARDS = 1;
+// Count cards
+export const countCards = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+};

@@ -4,159 +4,304 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Вход-Регистрация</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231207090758" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231207090758" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231207214101" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231207214101" />
 </head>
 
 
   <body>
-    <header class="header header--transparent">
-  <div class="header-top">
-    <div class="container">
-      <div class="header-top__container">
-        <div class="header-top__logo logo">
-          <a href="./main.html" class="header-top__logo--transparent">
-            <picture>
-              <source media="(min-width: 1365px)" srcset="assets/img/icons/logo.svg" />
-              <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-sm.svg" />
-              <img src="assets/img/icons/logo.svg" alt="logo" />
-            </picture>
-          </a>
-          <a href="./main.html">
-            <picture>
-              <source media="(min-width: 1365px)" srcset="assets/img/icons/logo-2.svg" />
-              <source media="(max-width: 1366px)" srcset="assets/img/icons/logo-2-sm.svg" />
-              <img src="assets/img/icons/logo-2.svg" alt="logo" />
-            </picture>
-          </a>
+    <main class="authentication-page"><section class="authentication">
+  <div class="container">
+    <div class="authentication__container">
+      <div class="authentication__content auth" data-content-block="auth">
+        <div class="authentication__btns">
+          <button type="button" class="--active" data-content-btn="auth">
+            <span>Вход</span>
+          </button>
+          <button type="button" data-content-btn="reg">
+            <span>Регистрация</span>
+          </button>
         </div>
-        <div class="header-top__content">
-          <div class="header-top__phone">
-            <a href="tel:+78452695262">+7 (8452) 69 52 62</a>
-            <p>Горячая линия</p>
+        <form class="auth__form" id="auth-form">
+          <div class="auth__form-input input">
+            <div class="input__head">Электронная почта*</div>
+            <div class="input__input">
+              <input type="email" placeholder="Введите электронную почту" />
+            </div>
+            <div class="input__hint">Error</div>
           </div>
-          <div class="header-top__panel">
-            <div class="header-top__btns">
-              <button type="button" class="header-top__btns-search">
+          <div class="auth__form-input input input--password">
+            <div class="input__head">Пароль*</div>
+            <div class="input__input">
+              <input type="password" placeholder="Введите пароль" />
+              <button type="button">
                 <svg>
-                  <use xlink:href="assets/img/icons/icons.svg#search"></use>
+                  <use xlink:href="./assets/img/icons/icons.svg#password-show"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="./assets/img/icons/icons.svg#password-hide"></use>
                 </svg>
               </button>
-              <div class="header-top__dropdown dropdown dropdown-sec js-dropdown">
-                <div class="dropdown__header js-dropdown-inner">
-                  <div class="dropdown__value js-dropdown-value">RU</div>
-                  <button type="button" class="dropdown__btn">
-                    <svg>
-                      <use xlink:href="assets/img/icons/icons.svg#arrow-caret-down"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="dropdown__content">
-                  <div class="dropdown__items">
-                    <div class="dropdown__item js-dropdown-item active">
-                      <input id="ru" type="radio" name="lang" value="lang-1" checked />
-                      <label for="ru">RU</label>
-                    </div>
-                    <div class="dropdown__item js-dropdown-item">
-                      <input id="lang-2" type="radio" name="lang" value="lang-2" />
-                      <label for="lang-2">EN</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="header-top__socials">
-              <a href="#" class="header-top__social">
-                <svg>
-                  <use xlink:href="assets/img/icons/icons.svg#vk-2"></use>
-                </svg>
-              </a>
-              <a href="#" class="header-top__social">
-                <svg>
-                  <use xlink:href="assets/img/icons/icons.svg#tg-2"></use>
-                </svg>
-              </a>
-              <a href="#" class="header-top__social">
-                <svg>
-                  <use xlink:href="assets/img/icons/icons.svg#odn-2"></use>
-                </svg>
-              </a>
+            <div class="input__hint">Error</div>
+          </div>
+          <div class="auth__form-checkboxes">
+            <div class="radiobox radiobox-M radiobox--check">
+              <input id="remember" type="checkbox" name="#" value="#" />
+              <label for="remember">Запомнить меня</label>
             </div>
-            <a href="#" class="header-top__btn btn btn-sec">
-              <span>Линия прямых обращений</span>
+            <div data-content-btn="recovery-pass">
+              <span>Забыли пароль?</span>
+            </div>
+          </div>
+          <button type="submit" form="auth-form" class="auth__form-btn btn btn-def">
+            <span>Войти</span>
+          </button>
+        </form>
+        <div class="auth__socials">
+          <p class="auth__socials-title">Войти с помощью</p>
+          <div class="auth__socials-items">
+            <a href="#">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#vk-3"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#odn-3"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#mail-3"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg>
+                <use xlink:href="assets/img/icons/icons.svg#gmail-3"></use>
+              </svg>
             </a>
           </div>
         </div>
-        <button type="button" class="header-top__burger --mob">
+      </div>
+      <div class="authentication__content recovery-pass" data-content-block="recovery-pass">
+        <button type="button" class="recovery-pass__back" data-content-btn="auth">
           <svg>
-            <use xlink:href="assets/img/icons/icons.svg#list"></use>
+            <use xlink:href="assets/img/icons/icons.svg#arrow-left-black"></use>
           </svg>
+          <span>Назад</span>
         </button>
-      </div>
-    </div>
-  </div>
-  <div class="header-bottom">
-    <div class="container">
-      <div class="header-bottom__container">
-        <div class="header-bottom__links">
-          <button type="button" class="header-bottom__btn-burg">
-            <svg>
-              <use xlink:href="assets/img/icons/icons.svg#list"></use>
-            </svg>
+        <form class="recovery-pass__form" id="recovery-pass-form">
+          <p class="recovery-pass__title">Восстановление пароля</p>
+          <p class="recovery-pass__text">
+            Введите свой адрес электронной почты, и мы вышлем вам инструкции по сбросу пароля.
+          </p>
+          <div class="recovery-pass__form-input input">
+            <div class="input__head">Электронная почта*</div>
+            <div class="input__input">
+              <input type="email" placeholder="Введите электронную почту" />
+            </div>
+            <div class="input__hint">Error</div>
+          </div>
+          <button type="button" form="recovery-pass__form" class="recovery-pass__btn btn btn-def">
+            <span>Восстановить пароль</span>
           </button>
-          <nav class="header-bottom__menu">
-            <ul class="header-bottom__list">
-              <li>
-                <a href="#">О регионе</a>
-              </li>
-              <li>
-                <a href="#">Инвестстандарт</a>
-              </li>
-              <li>
-                <a href="#">Инвестору</a>
-              </li>
-              <li>
-                <a href="#">Поддержка</a>
-              </li>
-              <li>
-                <a href="#">Площадки</a>
-              </li>
-              <li>
-                <a href="#">ГЧП</a>
-              </li>
-              <li>
-                <a href="#">Документы</a>
-              </li>
-              <li>
-                <a href="#">Медиа</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
+        </form>
+      </div>
+      <div class="authentication__content reg --active" data-content-block="reg">
+        <div class="reg__content">
+          <form class="reg__content-form" id="reg-form">
+            <div class="authentication__btns">
+              <button type="button" data-content-btn="auth">
+                <span>Вход</span>
+              </button>
+              <button type="button" class="--active" data-content-btn="reg">
+                <span>Регистрация</span>
+              </button>
+            </div>
+            <div class="reg__form-numbers">
+              <div class="reg__form-numbers__block --active">
+                <div class="reg__form-numbers__number">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#reg-check"></use>
+                  </svg>
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="reg__form-numbers__block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="141" height="32" viewBox="0 0 141 32" fill="none">
+                  <line
+                    x1="1"
+                    y1="15"
+                    x2="140"
+                    y2="15"
+                    stroke="#DEE2E7"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-dasharray="4 8"
+                  />
+                </svg>
+                <div class="reg__form-numbers__number">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#reg-check"></use>
+                  </svg>
+                  <span>2</span>
+                </div>
+              </div>
+              <div class="reg__form-numbers__block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="141" height="32" viewBox="0 0 141 32" fill="none">
+                  <line
+                    x1="1"
+                    y1="15"
+                    x2="140"
+                    y2="15"
+                    stroke="#DEE2E7"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-dasharray="4 8"
+                  />
+                </svg>
+                <div class="reg__form-numbers__number">
+                  <svg>
+                    <use xlink:href="assets/img/icons/icons.svg#reg-check"></use>
+                  </svg>
+                  <span>3</span>
+                </div>
+              </div>
+            </div>
+            <fieldset class="reg__content-fieldset --active" data-subcontent-block="reg-1">
+              <div class="reg__form-input input">
+                <div class="input__head">Имя*</div>
+                <div class="input__input">
+                  <input type="text" placeholder="Введите имя" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="reg__form-input input">
+                <div class="input__head">Фамилия*</div>
+                <div class="input__input">
+                  <input type="password" placeholder="Введите фамилию" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="reg__content-btns">
+                <button type="button" class="btn btn-def" data-subcontent-btn="reg-2">
+                  <span>Продолжить</span>
+                </button>
+              </div>
+            </fieldset>
+            <fieldset class="reg__content-fieldset" data-subcontent-block="reg-2">
+              <div class="reg__form-input input">
+                <div class="input__head">Электронная почта*</div>
+                <div class="input__input">
+                  <input type="email" placeholder="Введите электронную почту" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="reg__form-input input">
+                <div class="input__head">Номер телефона*</div>
+                <div class="input__input">
+                  <input type="tel" placeholder="Введите номер телефона" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="reg__content-btns">
+                <button type="button" class="btn btn-sec" data-subcontent-btn="reg-1">
+                  <span>Назад</span>
+                </button>
+                <button type="button" class="btn btn-def" data-subcontent-btn="reg-3">
+                  <span>Продолжить</span>
+                </button>
+              </div>
+            </fieldset>
+            <fieldset class="reg__content-fieldset" data-subcontent-block="reg-3">
+              <div class="reg__form-input input input--password">
+                <div class="input__head">Пароль*</div>
+                <div class="input__input">
+                  <input type="password" placeholder="Введите пароль" />
+                  <button type="button">
+                    <svg>
+                      <use xlink:href="./assets/img/icons/icons.svg#password-show"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./assets/img/icons/icons.svg#password-hide"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="reg__form-input input input--password">
+                <div class="input__head">Подтвердите пароль*</div>
+                <div class="input__input">
+                  <input type="password" placeholder="Подтвердите пароль" />
+                  <button type="button">
+                    <svg>
+                      <use xlink:href="./assets/img/icons/icons.svg#password-show"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./assets/img/icons/icons.svg#password-hide"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="reg__form-captcha">
+                <div class="reg__form-input input">
+                  <div class="input__head">Введите слово на картинке*</div>
+                  <div class="input__input">
+                    <input type="password" placeholder="Введите слово" />
+                  </div>
+                  <div class="input__hint">Error</div>
+                </div>
+                <div class="reg__form-captcha-img">
+                  <picture><source srcset="assets/img/captcha.webp" type="image/webp"><img src="assets/img/captcha.png" alt="" /></picture>
+                </div>
+              </div>
+              <div class="reg__content-btns">
+                <button type="button" class="btn btn-sec" data-subcontent-btn="reg-2">
+                  <span>Назад</span>
+                </button>
+                <button type="submit" class="btn btn-def">
+                  <span>Зарегистрироваться</span>
+                </button>
+                <div class="reg__content-btns-text">
+                  Нажимая кнопку «Зарегистрироваться», вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>
+                </div>
+              </div>
+            </fieldset>
+          </form>
         </div>
-        <div class="header-bottom__btns">
-          <a href="#" class="header-bottom__btn">
+      </div>
+      <div class="authentication__desc">
+        <div class="authentication__desc-title">Регистрация в личном кабинете обеспечивает:</div>
+        <ul class="authentication__desc-list">
+          <li>
             <svg>
-              <use xlink:href="assets/img/icons/icons.svg#map-pinned"></use>
+              <use xlink:href="assets/img/icons/icons.svg#list-icon"></use>
             </svg>
-            <p>Инвестиционная карта</p>
-          </a>
-          <a href="#" class="header-bottom__btn">
+            <span> Получение полной информации по интересующей вас теме </span>
+          </li>
+          <li>
             <svg>
-              <use xlink:href="assets/img/icons/icons.svg#entrance"></use>
+              <use xlink:href="assets/img/icons/icons.svg#list-icon"></use>
             </svg>
-            <p>Войти</p>
-          </a>
+            <span> Вся история обращений будет храниться в вашем профиле </span>
+          </li>
+        </ul>
+        <div class="authentication__desc-bg">
+          <svg>
+            <use xlink:href="assets/img/icons/icons.svg#reg-bg"></use>
+          </svg>
+          <svg>
+            <use xlink:href="assets/img/icons/icons.svg#reg-bg-mob"></use>
+          </svg>
         </div>
       </div>
     </div>
   </div>
-</header>
- <main></main>
-
-    <!--Модалка Написать обращение-->
+</section>
+</main>
+ <!--Модалка Написать обращение-->
 <div class="modal close-x" data-modal="write-request">
   <div class="modal__inner">
     <div class="modal__content modal-write --main">
@@ -391,8 +536,9 @@
     </div>
   </div>
 </div>
- <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231207090758"></script>
-<script src="js/app.min.js?_v=20231207090758"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231207214101"></script>
+<script src="js/app.min.js?_v=20231207214101"></script>
 
   </body>
 </html>

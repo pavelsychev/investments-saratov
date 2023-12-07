@@ -1,8 +1,54 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-import { TABLET, MOB, FIVE_CARDS, THREE_CARDS, ONE_CARDS } from '../modules/consts.js';
+import { TABLET, MOB, countCards } from '../modules/consts.js';
 
+function createSlides(elements, nameSlider, nameSlide, nameCard, countEl) {
+  if (document.querySelector(`.${nameSlider}`)) {
+    const slider = document.querySelector(`.${nameSlider}`);
+    slider.innerHTML = '';
+
+    for (let indexEl = 0; indexEl < elements.length; indexEl += countEl) {
+      const swiperSlide = document.createElement('div');
+      swiperSlide.classList.add('swiper-slide', `${nameSlide}`);
+
+      for (let j = indexEl; j < indexEl + countEl && j < elements.length; j += 1) {
+        const element = document.createElement('div');
+        element.classList.add(`${nameCard}`);
+        element.innerHTML = elements[j].innerHTML;
+        swiperSlide.appendChild(element);
+      }
+
+      slider.appendChild(swiperSlide);
+    }
+  }
+}
+
+function cardsInnerWidth(swiper) {
+  if (document.querySelectorAll(`.${swiper.card}`)) {
+    const cards = document.querySelectorAll(`.${swiper.card}`);
+
+    if (window.innerWidth >= TABLET) {
+      createSlides(cards, swiper.slider, swiper.slide, swiper.card, swiper.counts[0]);
+    } else if (window.innerWidth < TABLET && window.innerWidth >= MOB) {
+      createSlides(cards, swiper.slider, swiper.slide, swiper.card, swiper.counts[1]);
+    } else if (window.innerWidth < MOB) {
+      createSlides(cards, swiper.slider, swiper.slide, swiper.card, swiper.counts[2]);
+    }
+  }
+}
+
+// Массив для слайдеров , которые меняют количество в адаптиве
+const SWIPERS = {
+  news: {
+    card: 'news__card',
+    slider: 'news__slider',
+    slide: 'news__slide',
+    counts: [countCards.five, countCards.three, countCards.one],
+  },
+};
+
+// ------------------ Инициализация слайдеров ---------------------//
 function initBenefitsSlider() {
   if (document.querySelector('.benefits__swiper')) {
     const slider = document.querySelector('.benefits__swiper');
@@ -62,7 +108,7 @@ function initIntroSlider() {
       modules: [Pagination, Navigation, Autoplay],
       slidesPerView: 1,
       loop: true,
-      // autoplay: true,
+      autoplay: true,
       autoplay: {
         delay: 4000,
       },
@@ -79,7 +125,6 @@ function initIntroSlider() {
   }
 }
 
-// ------------------- Swiper news ----------------------------//
 function initNewsSlider() {
   if (document.querySelector('.news__swiper')) {
     const slider = document.querySelector('.news__swiper');
@@ -91,6 +136,7 @@ function initNewsSlider() {
       slidesPerView: 1,
       spaceBetween: 20,
       speed: 1500,
+      loop: true,
       navigation: {
         nextEl: btnNext,
         prevEl: btnPrev,
@@ -109,47 +155,14 @@ function initNewsSlider() {
   }
 }
 
-function createNewsSlides(elements, countEl) {
-  const newsSlider = document.querySelector('.news__slider');
-  newsSlider.innerHTML = '';
-
-  for (let indexEl = 0; indexEl < elements.length; indexEl += countEl) {
-    const swiperSlide = document.createElement('div');
-    swiperSlide.classList.add('swiper-slide', 'news__slide');
-
-    for (let j = indexEl; j < indexEl + countEl && j < elements.length; j += 1) {
-      const element = document.createElement('div');
-      element.classList.add('news__card');
-      element.innerHTML = elements[j].innerHTML;
-      swiperSlide.appendChild(element);
-    }
-
-    newsSlider.appendChild(swiperSlide);
-  }
-}
-
-function newsCardInnerWidth() {
-  if (document.querySelectorAll('.news__card')) {
-    const newsCards = document.querySelectorAll('.news__card');
-
-    if (window.innerWidth >= TABLET) {
-      createNewsSlides(newsCards, FIVE_CARDS);
-    } else if (window.innerWidth < TABLET && window.innerWidth >= MOB) {
-      createNewsSlides(newsCards, THREE_CARDS);
-    } else if (window.innerWidth < MOB) {
-      createNewsSlides(newsCards, ONE_CARDS);
-    }
-  }
-}
-// ---------------------------------------------------------//
-
 function initSliders() {
   initBenefitsSlider();
   initSuccessHistSlider();
   initIntroSlider();
 
-  newsCardInnerWidth();
+  cardsInnerWidth(SWIPERS.news);
   initNewsSlider();
 }
+// ----------------------------------------------------------------- //
 
 document.addEventListener('DOMContentLoaded', initSliders);

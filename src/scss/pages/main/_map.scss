@@ -18,8 +18,10 @@
   }
 
   &__map {
-    @include sizes(1364px, 778px);
+    width: 1364px;
+    min-height: 778px;
     margin: 0 auto;
+    height: auto;
   }
 
   &__items {
@@ -75,9 +77,12 @@
 @media screen and (max-width: $laptop) {
   .map {
     &__map {
-      @include sizes(1238px, 697px);
+      width: 105%;
+      min-height: 697px;
       margin-top: 70px;
-      margin-left: -30px;
+      transform: translateX(-30px);
+      position: relative;
+      z-index: -2;
     }
 
     &__items {
@@ -100,7 +105,9 @@
     }
 
     &__map {
-      @include sizes(100%, 380px);
+      width: 100%;
+      min-height: 380px;
+      transform: translateX(0);
     }
 
     &__text {
@@ -109,8 +116,8 @@
     }
 
     &__map {
-      margin: -5px 0 0;
-      height: 384px;
+      margin-top: 20px;
+      min-height: 388px;
     }
 
     &__items {
@@ -139,8 +146,9 @@
     }
 
     &__map {
-      @include sizes(103%, 210px);
-      margin: -5px 0 0 -5px;
+      width: 102%;
+      min-height: 181px;
+      transform: translateX(-5px);
     }
 
     &__item {

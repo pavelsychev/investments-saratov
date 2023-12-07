@@ -66,6 +66,53 @@ function inputFilesAction() {
   }
 }
 
-inputsDef();
-textareaDef();
-inputFilesAction();
+function changeVisibleInputPassword() {
+  if (document.querySelector('.input--password')) {
+    const inputs = document.querySelectorAll('.input--password');
+
+    inputs.forEach((input) => {
+      const btn = input.querySelector('button');
+      const inp = input.querySelector('input');
+
+      btn.addEventListener('click', (event) => {
+        btn.classList.toggle('--active');
+
+        if (event.currentTarget.classList.contains('--active')) {
+          inp.setAttribute('type', 'text');
+        } else {
+          inp.setAttribute('type', 'password');
+        }
+      });
+    });
+  }
+}
+
+function setPhoneMask() {
+  const phoneInputs = document.querySelectorAll('input[type="tel"]');
+
+  if (phoneInputs) {
+    phoneInputs.forEach((phoneInput) => {
+      const im = new Inputmask('+7 (999) 999-99-99');
+      im.mask(phoneInput);
+    });
+  }
+}
+
+function setMailMask() {
+  const mailnputs = document.querySelectorAll('input[type="email"]');
+
+  if (mailnputs) {
+    mailnputs.forEach((mailInput) => {
+      Inputmask('email').mask(mailInput);
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  inputsDef();
+  textareaDef();
+  inputFilesAction();
+  changeVisibleInputPassword();
+  setPhoneMask();
+  setMailMask();
+});
