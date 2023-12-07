@@ -18,7 +18,7 @@
     border-radius: 4px;
     background: $white;
     padding: 50px;
-    row-gap: 40px;
+    row-gap: 42px;
   }
 
   &__blocks {
@@ -125,24 +125,33 @@
       flex: auto;
     }
 
+    &__subtitle {
+      flex-shrink: 0;
+      flex: 0 0 calc(50% - 56px / 2);
+    }
+
     &__form {
       padding: 40px 32px;
-      row-gap: 32px;
+      row-gap: 26px;
     }
 
     &__items {
-      row-gap: 16px;
+      row-gap: 18px;
       column-gap: 16px;
     }
 
     &__blocks {
       flex-direction: column;
-      row-gap: 20px;
+      row-gap: 24px;
     }
 
     &__block {
       max-width: 100%;
       width: 100%;
+    }
+
+    &__btn {
+      padding: 14px 28px;
     }
   }
 }
@@ -158,9 +167,18 @@
       margin-bottom: 24px;
     }
 
+    &__subtitle {
+      line-height: 130%;
+    }
+
+    &__blocks {
+      row-gap: 20px;
+    }
+
     &__form {
       padding-left: 16px;
       padding-right: 16px;
+      row-gap: 30px;
     }
 
     &__block-radiobtns {

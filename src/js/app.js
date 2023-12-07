@@ -1,6 +1,7 @@
 // Modules
 import * as flsFunctions from './modules/gulp.js';
 import './modules/animation.js';
+import './modules/consts.js';
 
 // Scripts
 import './scripts/clicks.js';

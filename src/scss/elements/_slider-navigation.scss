@@ -47,6 +47,16 @@
   }
 }
 
+.slider-navigation--rel {
+  position: static;
+
+  .slider-navigation__btns-next,
+  .slider-navigation__btns-prev {
+    background-color: $white;
+    border-color: none;
+  }
+}
+
 @media screen and (max-width: $laptop) {
   .slider-navigation {
     right: 92px;

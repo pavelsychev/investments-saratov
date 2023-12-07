@@ -65,17 +65,20 @@
   }
 
   &__lists {
-    @extend %flexCenterBetween;
-    column-gap: 20px;
+    @extend %flexStartBetween;
+    column-gap: 40px;
+    row-gap: 40px;
+    flex-wrap: wrap;
   }
 
   &__list {
-    width: 292px;
+    width: 265px;
   }
 
   &__list-title {
     @extend %flexCenterBetween;
-    p {
+    p,
+    a {
       @extend %semibold16;
       color: $white;
     }
@@ -88,7 +91,7 @@
   &__list-items {
     padding-top: 21px;
     @extend %flexColumn;
-    row-gap: 24px;
+    row-gap: 16px;
   }
 
   &__item {
@@ -116,6 +119,10 @@
     &__bottom {
       padding-bottom: 20px;
     }
+
+    &__list {
+      width: 200px;
+    }
   }
 }
 
@@ -142,12 +149,62 @@
       font-size: 14px;
     }
 
+    &__lists {
+      row-gap: 0;
+    }
+
+    &__list {
+      padding: 20px 0;
+      border-bottom: 1px solid #424242;
+      width: 100%;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &.active {
+        .footer__list-title {
+          padding-bottom: 12px;
+
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        .footer__list-items {
+          overflow: visible;
+          padding-top: 12px;
+          opacity: 1;
+        }
+      }
+    }
+
     &__list-items {
-      padding-top: 18px;
+      row-gap: 12px;
+      padding-top: 0;
+      height: 0;
+      transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
+      overflow: hidden;
+      opacity: 0;
     }
 
     &__logo {
       width: 39px;
+    }
+
+    &__center {
+      margin-top: 30px;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    &__list-title {
+      transition: $transitionPadding;
+
+      svg {
+        display: block;
+        @include sizes(20px, 20px);
+      }
     }
   }
 }
@@ -186,47 +243,8 @@
       font-size: 16px;
     }
 
-    &__center {
-      margin-top: 30px;
-      padding-bottom: 0;
-      border-bottom: 0;
-    }
-
     &__lists {
       flex-direction: column;
-    }
-
-    &__list {
-      padding: 16px 0;
-      border-bottom: 1px solid #424242;
-      width: 100%;
-
-      &:first-child {
-        padding-top: 0;
-      }
-
-      &.active {
-        .footer__list-title {
-          padding-bottom: 12px;
-
-          svg {
-            transform: rotate(180deg);
-          }
-        }
-        .footer__list-items {
-          overflow: visible;
-          opacity: 1;
-        }
-      }
-    }
-
-    &__list-items {
-      row-gap: 8px;
-      padding-top: 0;
-      height: 0;
-      transition: $transitionVisibility, $transitionOpacity, $transitionHeight, $transitionPadding;
-      overflow: hidden;
-      opacity: 0;
     }
 
     &__item,
@@ -237,14 +255,6 @@
     &__list-title p {
       font-size: 16px;
       line-height: normal;
-    }
-
-    &__list-title {
-      transition: $transitionPadding;
-      svg {
-        display: block;
-        @include sizes(20px, 20px);
-      }
     }
 
     &__bottom {

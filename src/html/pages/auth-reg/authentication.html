@@ -1,3 +1,72 @@
 <section class="authentication">
-  <div class="authentication__container"></div>
+	<div class="authentication__container">
+		<div class="authentication__btns">
+			<button type="button">
+				<span>Вход</span>
+			</button>
+			<button type="button">
+				<span>Регистрация</span>
+			</button>
+		</div>
+		<div class="authentication__content">
+			<div class="authentication__content-auth auth">
+				<form class="auth__form">
+					<div class="auth__form-input input">
+						<div class="input__head">Электронная почта*</div>
+						<div class="input__input">
+							<input type="email" placeholder="Введите ваш email" />
+						</div>
+						<div class="input__hint">Error</div>
+					</div>
+					<div class="auth__form-input input">
+						<div class="input__head">Пароль*</div>
+						<div class="input__input">
+							<input type="password" placeholder="Введите пароль" />
+							<button type="button">
+								<svg>
+									<use xlink:href="./assets/img/icons/icons.svg#password-show"></use>
+								</svg>
+								<svg>
+									<use xlink:href="./assets/img/icons/icons.svg#password-hide"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="input__hint">Error</div>
+					</div>
+				</form>
+				<div class="auth__socials">
+					<p class="auth__socials-title">Войти с помощью</p>
+					<div class="auth__socials-items">
+						<a href="#">
+							<svg>
+								<use xlink:href="@img/icons/icons.svg#vk-3"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="@img/icons/icons.svg#odn-3"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="@img/icons/icons.svg#mail-3"></use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg>
+								<use xlink:href="@img/icons/icons.svg#gmail-3"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="authentication__desc">
+			<div class="authentication__desc-title">Регистрация в личном кабинете обеспечивает:</div>
+			<ul class="authentication__des-list">
+				<li>Получение полной информации по интересующей вас теме</li>
+				<li>Вся история обращений будет храниться в вашем профиле</li>
+			</ul>
+		</div>
+	</div>
 </section>

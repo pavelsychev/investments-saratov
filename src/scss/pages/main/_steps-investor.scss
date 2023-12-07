@@ -162,12 +162,20 @@
       display: none;
     }
 
+    &__container {
+      row-gap: 32px;
+    }
+
     &__item {
-      padding: 32px;
+      padding: 32px 32px 30px 32px;
     }
 
     &__item-tit {
       line-height: 120%;
+    }
+
+    &__item-but {
+      padding: 12px 28px;
     }
 
     &__item-content {
@@ -196,9 +204,20 @@
       }
     }
 
+    &__container {
+      row-gap: 40px;
+    }
+
     &__item-btn {
       top: 20px;
       right: 20px;
+    }
+
+    &__item-but {
+      margin-top: 28px;
+      span {
+        font-size: 18px;
+      }
     }
 
     &__item-title {
@@ -219,6 +238,7 @@
     &__item-txt,
     &__item-list li {
       font-size: 16px;
+      line-height: 135%;
     }
   }
 }

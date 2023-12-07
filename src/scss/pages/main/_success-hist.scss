@@ -139,6 +139,10 @@
       padding-bottom: 80px;
     }
 
+    &__slide-desc {
+      font-size: 32px;
+    }
+
     &__slide-content {
       row-gap: 205px;
     }
@@ -158,6 +162,7 @@
 
     &__slide-content {
       padding-bottom: 80px;
+      row-gap: 116px;
     }
 
     &__slide-items {

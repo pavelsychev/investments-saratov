@@ -1,6 +1,8 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
+import { TABLET, MOB, FIVE_CARDS, THREE_CARDS, ONE_CARDS } from '../modules/consts.js';
+
 function initBenefitsSlider() {
   if (document.querySelector('.benefits__swiper')) {
     const slider = document.querySelector('.benefits__swiper');
@@ -77,6 +79,7 @@ function initIntroSlider() {
   }
 }
 
+// ------------------- Swiper news ----------------------------//
 function initNewsSlider() {
   if (document.querySelector('.news__swiper')) {
     const slider = document.querySelector('.news__swiper');
@@ -86,20 +89,66 @@ function initNewsSlider() {
     new Swiper(slider, {
       modules: [Navigation],
       slidesPerView: 1,
-      loop: true,
+      spaceBetween: 20,
       speed: 1500,
       navigation: {
         nextEl: btnNext,
         prevEl: btnPrev,
       },
+      breakpoints: {
+        300: {
+          slidesPerView: 1.06,
+          spaceBetween: 13,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+      },
     });
   }
 }
+
+function createNewsSlides(elements, countEl) {
+  const newsSlider = document.querySelector('.news__slider');
+  newsSlider.innerHTML = '';
+
+  for (let indexEl = 0; indexEl < elements.length; indexEl += countEl) {
+    const swiperSlide = document.createElement('div');
+    swiperSlide.classList.add('swiper-slide', 'news__slide');
+
+    for (let j = indexEl; j < indexEl + countEl && j < elements.length; j += 1) {
+      const element = document.createElement('div');
+      element.classList.add('news__card');
+      element.innerHTML = elements[j].innerHTML;
+      swiperSlide.appendChild(element);
+    }
+
+    newsSlider.appendChild(swiperSlide);
+  }
+}
+
+function newsCardInnerWidth() {
+  if (document.querySelectorAll('.news__card')) {
+    const newsCards = document.querySelectorAll('.news__card');
+
+    if (window.innerWidth >= TABLET) {
+      createNewsSlides(newsCards, FIVE_CARDS);
+    } else if (window.innerWidth < TABLET && window.innerWidth >= MOB) {
+      createNewsSlides(newsCards, THREE_CARDS);
+    } else if (window.innerWidth < MOB) {
+      createNewsSlides(newsCards, ONE_CARDS);
+    }
+  }
+}
+// ---------------------------------------------------------//
 
 function initSliders() {
   initBenefitsSlider();
   initSuccessHistSlider();
   initIntroSlider();
+
+  newsCardInnerWidth();
   initNewsSlider();
 }
 

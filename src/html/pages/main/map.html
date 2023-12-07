@@ -8,9 +8,11 @@
       </p>
     </div>
     <div class="map__map">
-      <svg>
-        <use xlink:href="@img/icons/icons.svg#map"></use>
-      </svg>
+      <picture>
+        <source media="(min-width: 1365px)" srcset="@img/icons/map.svg" />
+        <source media="(max-width: 1366px)" srcset="@img/icons/map-mob.svg" />
+        <img src="@img/icons/map.svg" alt="" />
+      </picture>
     </div>
     <div class="map__items">
       <div class="map__item">

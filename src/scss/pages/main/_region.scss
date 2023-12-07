@@ -8,8 +8,7 @@
   }
 
   &__titles {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    @extend %flexCenterBetween;
     margin: 0 0 40px 0;
   }
 
@@ -30,13 +29,13 @@
   &__items-two__stat-container,
   &__items-one__stat-container {
     display: grid;
-    grid-template-columns: 0.9fr 1fr;
     grid-template-rows: 240px;
     grid-column: span 2;
   }
 
   &__items-one__stat-container {
     gap: 20px;
+    grid-template-columns: 0.8fr 0.8fr;
   }
 
   &__title {
@@ -47,7 +46,12 @@
     justify-self: end;
     text-align: center;
     color: $black;
+    max-width: 760px;
     @extend %mainTxt;
+  }
+
+  &__items-two__stat-container {
+    grid-template-columns: 0.76fr 1fr;
   }
 
   &__item-stat {
@@ -81,7 +85,7 @@
   }
 
   &__pic-one {
-    flex: 0 2 840px;
+    flex: 1 1 860px;
   }
 
   &__item-pic__img {
@@ -152,16 +156,72 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .region {
+    &__titles {
+      align-items: flex-start;
+    }
+
+    &__pic-one {
+      flex: 1 1 600px;
+    }
+
+    &__item-stat__quantity {
+      font-size: 32px;
+    }
+
+    &__item-stat__text {
+      line-height: 130%;
+    }
+
+    &__text {
+      text-align: left;
+      max-width: 575px;
+    }
+
+    &__stat-four {
+      padding-left: 64px;
+    }
+
+    &__item-about {
+      width: 320px;
+    }
+
+    &__item-chart-title {
+      font-size: 24px;
+    }
+
+    &__item-chart {
+      min-width: 490px;
+      justify-content: space-between;
+    }
+
+    &__pic-two {
+      min-width: 330px;
+    }
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .region {
     &__titles {
       display: flex;
       flex-direction: column;
       gap: 32px 0;
+      margin-bottom: 32px;
+    }
+
+    &__items-two__stat-container {
+      grid-template-columns: 1fr 1fr;
     }
 
     &__text {
       text-align: start;
+      max-width: 100%;
+    }
+
+    &__item-about {
+      width: 334px;
     }
 
     &__text,
@@ -237,6 +297,11 @@
 
     &__text {
       text-align: start;
+      line-height: 130%;
+    }
+
+    &__titles {
+      margin-bottom: 24px;
     }
 
     &__text,
@@ -245,7 +310,41 @@
     }
 
     &__item-stat {
-      padding: 40px;
+      padding: 32px 40px 32px 32px;
+    }
+
+    &__items-one,
+    &__items-two,
+    &_items-two__stat-container {
+      row-gap: 12px;
+    }
+
+    &__item-chart {
+      padding: 20px;
+    }
+
+    &__item-pic__img {
+      height: 200px;
+    }
+
+    &__item-chart__pic {
+      height: 188px;
+    }
+
+    &__item-about {
+      min-height: 200px;
+    }
+
+    &__item-about__link {
+      font-size: 16px;
+    }
+
+    &__pic-one {
+      @include sizes(100%, 200px);
+
+      img {
+        height: 100%;
+      }
     }
 
     &__items-one {
@@ -278,6 +377,18 @@
 
     &__item-about {
       order: 1;
+    }
+
+    &__item-chart {
+      min-width: 100%;
+    }
+
+    &__pic-two {
+      min-width: 100%;
+    }
+
+    &__item-about {
+      width: 100%;
     }
   }
 }

@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231205211641" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231205211641" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231207090758" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231207090758" />
 </head>
 
 
@@ -169,12 +169,12 @@
         <div class="intro__navigation-btns slider-navigation__btns">
           <button type="button" class="slider-navigation__btns-prev">
             <svg width="40" height="40">
-              <use xlink:href="assets/img/icons/icons.svg#slider-prev"></use>
+              <use xlink:href="assets/img/icons/icons.svg#slide-prev-white"></use>
             </svg>
           </button>
           <button type="button" class="slider-navigation__btns-next">
             <svg width="40" height="40">
-              <use xlink:href="assets/img/icons/icons.svg#slider-next"></use>
+              <use xlink:href="assets/img/icons/icons.svg#slide-next-white"></use>
             </svg>
           </button>
         </div>
@@ -640,12 +640,12 @@
         <div class="benefits__navigation-btns slider-navigation__btns">
           <button type="button" class="slider-navigation__btns-prev">
             <svg width="40" height="40">
-              <use xlink:href="assets/img/icons/icons.svg#slider-prev"></use>
+              <use xlink:href="assets/img/icons/icons.svg#slide-prev-white"></use>
             </svg>
           </button>
           <button type="button" class="slider-navigation__btns-next">
             <svg width="40" height="40">
-              <use xlink:href="assets/img/icons/icons.svg#slider-next"></use>
+              <use xlink:href="assets/img/icons/icons.svg#slide-next-white"></use>
             </svg>
           </button>
         </div>
@@ -755,9 +755,11 @@
       </p>
     </div>
     <div class="map__map">
-      <svg>
-        <use xlink:href="assets/img/icons/icons.svg#map"></use>
-      </svg>
+      <picture>
+        <source media="(min-width: 1365px)" srcset="assets/img/icons/map.svg" />
+        <source media="(max-width: 1366px)" srcset="assets/img/icons/map-mob.svg" />
+        <img src="assets/img/icons/map.svg" alt="" />
+      </picture>
     </div>
     <div class="map__items">
       <div class="map__item">
@@ -892,12 +894,12 @@
         <div class="success-hist__navigation-btns slider-navigation__btns">
           <button type="button" class="slider-navigation__btns-prev">
             <svg width="40" height="40">
-              <use xlink:href="assets/img/icons/icons.svg#slider-prev"></use>
+              <use xlink:href="assets/img/icons/icons.svg#slide-prev-white"></use>
             </svg>
           </button>
           <button type="button" class="slider-navigation__btns-next">
             <svg width="40" height="40">
-              <use xlink:href="assets/img/icons/icons.svg#slider-next"></use>
+              <use xlink:href="assets/img/icons/icons.svg#slide-next-white"></use>
             </svg>
           </button>
         </div>
@@ -1150,186 +1152,337 @@
 
   <section class="section news">
   <div class="container">
-    <div class="news__title-container">
-      <p class="news__title subtitle">Новости</p>
-      <div class="news__navigation slider-navigation">
-        <div class="news__navigation-btns slider-navigation__btns">
-          <button type="button" class="slider-navigation__btns-prev">
-            <svg width="40" height="40">
-              <use xlink:href="assets/img/icons/icons.svg#slider-prev"></use>
-            </svg>
-          </button>
-          <button type="button" class="slider-navigation__btns-next">
-            <svg width="40" height="40">
-              <use xlink:href="assets/img/icons/icons.svg#slider-next"></use>
-            </svg>
-          </button>
+    <div class="news__container">
+      <div class="news__title-container">
+        <p class="news__title subtitle">Новости</p>
+        <div class="news__navigation slider-navigation--rel">
+          <div class="news__navigation-btns slider-navigation__btns">
+            <button type="button" class="slider-navigation__btns-prev">
+              <svg width="40" height="40">
+                <use xlink:href="assets/img/icons/icons.svg#slide-prev-black"></use>
+              </svg>
+            </button>
+            <button type="button" class="slider-navigation__btns-next">
+              <svg width="40" height="40">
+                <use xlink:href="assets/img/icons/icons.svg#slide-next-black"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="swiper news__swiper">
-      <div class="swiper-wrapper news__slider">
-        <div class="swiper-slide news__slide">
-          <div class="news__item-main">
-            <div class="news__item-main-pic">
-              <picture><source srcset="assets/img/news/news-img-1.webp" type="image/webp"><img src="assets/img/news/news-img-1.png" alt="news-img" class="news__item-main-pic__img" /></picture>
+      <div class="swiper news__swiper">
+        <div class="swiper-wrapper news__slider">
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-1.webp" type="image/webp"><img src="assets/img/news/news-img-1.png" alt="news-img" class="news__card-main-pic__img" /></picture>
             </div>
-            <div class="news__item-main-content">
-              <p class="news__item-main-title">
-                Корпорация развития Саратовской области помогает инвесторам найти площадку и получить льготное
-                финансирование
-              </p>
-              <p class="news__item-main-text">
-                Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации и
-                министерства.
-              </p>
-            </div>
-            <div class="news__item-more">
-              <time class="news__item-date">16.10.2023</time>
-              <a href="#!" class="news__item-link">Подробнее</a>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  Корпорация развития Саратовской области помогает инвесторам найти площадку и получить льготное
+                  финансирование
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">16.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
             </div>
           </div>
-          <div class="news__items">
-            <div class="news__item">
-              <div class="news__item-pic">
-                <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="news-img" class="news__item-pic__img" /></picture>
-              </div>
-              <div class="news__item-content">
-                <p class="news__item-title">
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
                   Правительство России усилило поддержку инвесторов в туристической отрасли
                 </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
               </div>
-              <div class="news__item-more">
-                <time class="news__item-date">16.10.2023</time>
-                <a href="#!" class="news__item-link">Подробнее</a>
+              <div class="news__card-more">
+                <time class="news__card-date">17.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
               </div>
             </div>
-            <div class="news__item">
-              <div class="news__item-pic">
-                <picture><source srcset="assets/img/news/news-img-3.webp" type="image/webp"><img src="assets/img/news/news-img-3.png" alt="news-img" class="news__item-pic__img" /></picture>
-              </div>
-              <div class="news__item-content">
-                <p class="news__item-title">
-                  Правительство России усилило поддержку инвесторов в туристической отрасли
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-3.webp" type="image/webp"><img src="assets/img/news/news-img-3.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  В Балашовской районе реализуется инвестиционный проект по увеличению мощностей сахарног...
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
                 </p>
               </div>
-              <div class="news__item-more">
-                <time class="news__item-date">16.10.2023</time>
-                <a href="#!" class="news__item-link">Подробнее</a>
+              <div class="news__card-more">
+                <time class="news__card-date">18.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
               </div>
             </div>
-            <div class="news__item">
-              <div class="news__item-pic">
-                <picture><source srcset="assets/img/news/news-img-4.webp" type="image/webp"><img src="assets/img/news/news-img-4.png" alt="news-img" class="news__item-pic__img" /></picture>
-              </div>
-              <div class="news__item-content">
-                <p class="news__item-title">
-                  Правительство России усилило поддержку инвесторов в туристической отрасли
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-4.webp" type="image/webp"><img src="assets/img/news/news-img-4.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">Лимит выдачи средств промышленной ипотеке может быть увеличен</p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
                 </p>
               </div>
-              <div class="news__item-more">
-                <time class="news__item-date">16.10.2023</time>
-                <a href="#!" class="news__item-link">Подробнее</a>
+              <div class="news__card-more">
+                <time class="news__card-date">19.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
               </div>
             </div>
-            <div class="news__item">
-              <div class="news__item-pic">
-                <picture><source srcset="assets/img/news/news-img-5.webp" type="image/webp"><img src="assets/img/news/news-img-5.png" alt="news-img" class="news__item-pic__img" /></picture>
-              </div>
-              <div class="news__item-content">
-                <p class="news__item-title">
-                  Правительство России усилило поддержку инвесторов в туристической отрасли
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-5.webp" type="image/webp"><img src="assets/img/news/news-img-5.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  На строительство современных очистных сооружений индустриального парка направят...
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
                 </p>
               </div>
-              <div class="news__item-more">
-                <time class="news__item-date">16.10.2023</time>
-                <a href="#!" class="news__item-link">Подробнее</a>
+              <div class="news__card-more">
+                <time class="news__card-date">20.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-1.webp" type="image/webp"><img src="assets/img/news/news-img-1.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  Корпорация развития Саратовской области помогает инвесторам найти площадку и получить льготное
+                  финансирование
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">21.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  Правительство России усилило поддержку инвесторов в туристической отрасли
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">22.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-3.webp" type="image/webp"><img src="assets/img/news/news-img-3.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  В Балашовской районе реализуется инвестиционный проект по увеличению мощностей сахарног...
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">23.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-4.webp" type="image/webp"><img src="assets/img/news/news-img-4.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">Лимит выдачи средств промышленной ипотеке может быть увеличен</p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">24.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-5.webp" type="image/webp"><img src="assets/img/news/news-img-5.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  На строительство современных очистных сооружений индустриального парка направят...
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">25.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-1.webp" type="image/webp"><img src="assets/img/news/news-img-1.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  Корпорация развития Саратовской области помогает инвесторам найти площадку и получить льготное
+                  финансирование
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">26.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  Правительство России усилило поддержку инвесторов в туристической отрасли
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">27.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-3.webp" type="image/webp"><img src="assets/img/news/news-img-3.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  В Балашовской районе реализуется инвестиционный проект по увеличению мощностей сахарног...
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">28.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-4.webp" type="image/webp"><img src="assets/img/news/news-img-4.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">Лимит выдачи средств промышленной ипотеке может быть увеличен</p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">29.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__card">
+            <div class="news__card-pic">
+              <picture><source srcset="assets/img/news/news-img-5.webp" type="image/webp"><img src="assets/img/news/news-img-5.png" alt="news-img" class="news__card-main-pic__img" /></picture>
+            </div>
+            <div class="news__card-content">
+              <div class="news__card-content-main">
+                <p class="news__card-content-title">
+                  На строительство современных очистных сооружений индустриального парка направят...
+                </p>
+                <p class="news__card-content-text">
+                  Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации
+                  и министерства.
+                </p>
+              </div>
+              <div class="news__card-more">
+                <time class="news__card-date">30.10.2023</time>
+                <a href="#!" class="news__card-link">Подробнее</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide news__slide">
-          <div class="news__item-main">
-            <div class="news__item-main-pic">
-              <picture><source srcset="assets/img/news/news-img-1.webp" type="image/webp"><img src="assets/img/news/news-img-1.png" alt="news-img" class="news__item-main-pic__img" /></picture>
-            </div>
-            <div class="news__item-main-content">
-              <p class="news__item-main-title">
-                Корпорация развития Саратовской области помогает инвесторам найти площадку и получить льготное
-                финансирование
-              </p>
-              <p class="news__item-main-text">
-                Александр Храпугин рассказал о государственной поддержке инвестиционных проектов со стороны Корпорации и
-                министерства.
-              </p>
-            </div>
-            <div class="news__item-more">
-              <time class="news__item-date">16.10.2023</time>
-              <a href="#!" class="news__item-link">Подробнее</a>
-            </div>
-          </div>
-          <div class="news__items">
-            <div class="news__item">
-              <div class="news__item-pic">
-                <picture><source srcset="assets/img/news/news-img-2.webp" type="image/webp"><img src="assets/img/news/news-img-2.png" alt="news-img" class="news__item-pic__img" /></picture>
-              </div>
-              <div class="news__item-content">
-                <p class="news__item-title">
-                  Правительство России усилило поддержку инвесторов в туристической отрасли
-                </p>
-              </div>
-              <div class="news__item-more">
-                <time class="news__item-date">16.10.2023</time>
-                <a href="#!" class="news__item-link">Подробнее</a>
-              </div>
-            </div>
-            <div class="news__item">
-              <div class="news__item-pic">
-                <picture><source srcset="assets/img/news/news-img-3.webp" type="image/webp"><img src="assets/img/news/news-img-3.png" alt="news-img" class="news__item-pic__img" /></picture>
-              </div>
-              <div class="news__item-content">
-                <p class="news__item-title">
-                  Правительство России усилило поддержку инвесторов в туристической отрасли
-                </p>
-              </div>
-              <div class="news__item-more">
-                <time class="news__item-date">16.10.2023</time>
-                <a href="#!" class="news__item-link">Подробнее</a>
-              </div>
-            </div>
-            <div class="news__item">
-              <div class="news__item-pic">
-                <picture><source srcset="assets/img/news/news-img-4.webp" type="image/webp"><img src="assets/img/news/news-img-4.png" alt="news-img" class="news__item-pic__img" /></picture>
-              </div>
-              <div class="news__item-content">
-                <p class="news__item-title">
-                  Правительство России усилило поддержку инвесторов в туристической отрасли
-                </p>
-              </div>
-              <div class="news__item-more">
-                <time class="news__item-date">16.10.2023</time>
-                <a href="#!" class="news__item-link">Подробнее</a>
-              </div>
-            </div>
-            <div class="news__item">
-              <div class="news__item-pic">
-                <picture><source srcset="assets/img/news/news-img-5.webp" type="image/webp"><img src="assets/img/news/news-img-5.png" alt="news-img" class="news__item-pic__img" /></picture>
-              </div>
-              <div class="news__item-content">
-                <p class="news__item-title">
-                  Правительство России усилило поддержку инвесторов в туристической отрасли
-                </p>
-              </div>
-              <div class="news__item-more">
-                <time class="news__item-date">16.10.2023</time>
-                <a href="#!" class="news__item-link">Подробнее</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div class="news__btn">
+        <a href="#" class="btn btn-def">
+          <span>Смотреть все новости</span>
+        </a>
       </div>
     </div>
   </div>
+  <button type="button" class="news__btn-modal" data-modal-el="write-request">
+    <svg>
+      <use xlink:href="assets/img/icons/icons.svg#email"></use>
+    </svg>
+  </button>
 </section>
 
 </main>
@@ -1391,38 +1544,25 @@
             </div>
             <ul class="footer__list-items js-dropdown-content">
               <li class="footer__item">
-                <a href="#">О регионе</a>
+                <a href="#">Расположение</a>
               </li>
               <li class="footer__item">
-                <a href="#">О регионе</a>
+                <a href="#">Статистика региона</a>
               </li>
               <li class="footer__item">
-                <a href="#">О регионе</a>
+                <a href="#">Социально-экономическое развитие</a>
               </li>
               <li class="footer__item">
-                <a href="#">О регионе</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__list js-dropdown-list">
-            <div class="footer__list-title js-dropdown-title">
-              <p>Инвестстандарт</p>
-              <svg width="20" height="20">
-                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
-              </svg>
-            </div>
-            <ul class="footer__list-items js-dropdown-content">
-              <li class="footer__item">
-                <a href="#">Инвестстандарт</a>
+                <a href="#">Стратегия</a>
               </li>
               <li class="footer__item">
-                <a href="#">Инвестстандарт</a>
+                <a href="#">Истории успеха</a>
               </li>
               <li class="footer__item">
-                <a href="#">Инвестстандарт</a>
+                <a href="#">Муниципальные образования</a>
               </li>
               <li class="footer__item">
-                <a href="#">Инвестстандарт</a>
+                <a href="#">Инфраструктурные проекты</a>
               </li>
             </ul>
           </div>
@@ -1435,16 +1575,71 @@
             </div>
             <ul class="footer__list-items js-dropdown-content">
               <li class="footer__item">
-                <a href="#">Инвестору</a>
+                <a href="#">Заявка инвестора</a>
               </li>
               <li class="footer__item">
-                <a href="#">Инвестору</a>
+                <a href="#">Корпорация развития</a>
               </li>
               <li class="footer__item">
-                <a href="#">Инвестору</a>
+                <a href="#">Инвестиционный комитет</a>
               </li>
               <li class="footer__item">
-                <a href="#">Инвестору</a>
+                <a href="#">Клуб стратегических инициатив</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиции в туризм</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Законодательство</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Требуется инвестор</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Кадры</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">План создания объектов</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Опросы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Поддержка</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <ul class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Единое окно</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Помощь инвестору</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Налоговые льготы</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Субсидии</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">СПИК 2.0</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инфраструктура поддержки</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Инвестиционный договор</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Региональный инвестстандарт</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Калькулятор мер поддержки</a>
               </li>
             </ul>
           </div>
@@ -1457,18 +1652,89 @@
             </div>
             <ul class="footer__list-items js-dropdown-content">
               <li class="footer__item">
-                <a href="#">Площадки</a>
+                <a href="#">Предложить площадку</a>
               </li>
               <li class="footer__item">
-                <a href="#">Площадки</a>
+                <a href="#">Реестр свободных земельных участков</a>
               </li>
               <li class="footer__item">
-                <a href="#">Площадки</a>
+                <a href="#">Преференциальные территории</a>
               </li>
               <li class="footer__item">
-                <a href="#">Площадки</a>
+                <a href="#">Площадки с объектами капитального строительства</a>
               </li>
             </ul>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Инвестстандарт</a>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Линия прямых обращений</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Получить консультацию</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Мониторинг обращений</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Подать заявку на сопровождение проекта</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Предложить проект</a>
+              </li>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>ГЧП</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Проекты ГЧП</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Общие сведения</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Меры поддержки</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Реестр объектов для ГЧП</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Контакты ГЧП</a>
+              </li>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <p>Документы</p>
+              <svg width="20" height="20">
+                <use xlink:href="assets/img/icons/icons.svg#arrow-white-down"></use>
+              </svg>
+            </div>
+            <div class="footer__list-items js-dropdown-content">
+              <li class="footer__item">
+                <a href="#">Законодательство</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Корпоративные облигации</a>
+              </li>
+              <li class="footer__item">
+                <a href="#">Презентационные материалы</a>
+              </li>
+            </div>
           </div>
           <div class="footer__list js-dropdown-list">
             <div class="footer__list-title js-dropdown-title">
@@ -1479,17 +1745,19 @@
             </div>
             <div class="footer__list-items js-dropdown-content">
               <li class="footer__item">
-                <a href="#">Медиа</a>
+                <a href="#">Новости</a>
               </li>
               <li class="footer__item">
-                <a href="#">Медиа</a>
+                <a href="#">Мероприятия</a>
               </li>
               <li class="footer__item">
-                <a href="#">Медиа</a>
+                <a href="#">Фото и видеоотчет</a>
               </li>
-              <li class="footer__item">
-                <a href="#">Медиа</a>
-              </li>
+            </div>
+          </div>
+          <div class="footer__list js-dropdown-list">
+            <div class="footer__list-title js-dropdown-title">
+              <a href="#">Контакты</a>
             </div>
           </div>
         </div>
@@ -1737,8 +2005,8 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231205211641"></script>
-<script src="js/app.min.js?_v=20231205211641"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231207090758"></script>
+<script src="js/app.min.js?_v=20231207090758"></script>
 
   </body>
 </html>
