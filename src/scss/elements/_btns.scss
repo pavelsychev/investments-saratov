@@ -29,7 +29,7 @@
 
 .btn--icon {
   @extend %flexCenterBetween;
-  padding: 12px 20px;
+  padding: 11px 20px;
   column-gap: 4px;
 }
 
@@ -184,7 +184,7 @@
 
 @media screen and (max-width: $tablet) {
   .btn {
-    padding: 12px 28px;
+    padding: 11px 28px;
   }
 }
 

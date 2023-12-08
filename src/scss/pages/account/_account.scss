@@ -34,10 +34,12 @@
   &__fieldset-inputs {
     @extend %flexCenterStart;
     column-gap: 16px;
+    flex-wrap: wrap;
+    row-gap: 24px;
   }
 
   &__fieldset-input {
-    flex: 0 0 32.2%;
+    flex: 0 0 286px;
   }
 
   &__back {
@@ -79,6 +81,47 @@
       width: 286px;
     }
   }
+
+  &__titles {
+    @extend %flexCenterBetween;
+  }
+
+  &__fieldset-radioboxs {
+    @extend %flexCenterStart;
+    column-gap: 24px;
+  }
+
+  &__fieldset-inputs--organization {
+    row-gap: 24px;
+    flex-wrap: wrap;
+    width: 588px;
+  }
+
+  &__title-btn {
+    padding: 8px 16px;
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  &__form--organization {
+    .account {
+      &__fieldset {
+        display: none;
+
+        &.--active {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__fieldset-radiobox {
+    label {
+      font-size: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: $laptop) {
@@ -91,6 +134,14 @@
 
     &__fieldset-linkin {
       flex-basis: calc(50% - 40px / 2);
+    }
+
+    &__fieldset-inputs--organization {
+      width: 528px;
+    }
+
+    &__fieldset-input {
+      flex: 0 0 256px;
     }
   }
 }
@@ -108,10 +159,6 @@
     &__form,
     &__content {
       row-gap: 32px;
-    }
-
-    &__fieldset-title {
-      margin-bottom: 20px;
     }
 
     &__fieldset-inputs {
@@ -160,6 +207,16 @@
         width: 296px;
       }
     }
+
+    &__fieldset-inputs--organization {
+      row-gap: 24px;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .account__fieldset-input {
+        flex-basis: calc(50% - 16px / 2);
+      }
+    }
   }
 }
 
@@ -192,6 +249,31 @@
       row-gap: 16px;
       .account__fieldset-input {
         width: 100%;
+      }
+    }
+
+    &__titles {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
+
+    &__fieldset-title {
+      margin-bottom: 20px;
+    }
+
+    &__fieldset-radioboxs {
+      flex-direction: column;
+      row-gap: 16px;
+      align-items: flex-start;
+    }
+
+    &__fieldset-inputs--organization {
+      row-gap: 16px;
+      width: 100%;
+
+      .account__fieldset-input {
+        flex-basis: 100%;
       }
     }
   }

@@ -1259,6 +1259,7 @@ svg {
   justify-content: flex-start;
 }
 
+.account__titles,
 .reg__form-numbers,
 .reg__form-numbers__block,
 .auth__form-checkboxes,
@@ -1301,6 +1302,7 @@ svg {
   justify-content: space-between;
 }
 
+.account__fieldset-radioboxs,
 .account__fieldset-inputs,
 .calculator__block-radiobtns,
 .calculator__items,
@@ -1701,7 +1703,7 @@ fieldset {
 }
 
 .btn--icon {
-  padding: 12px 20px;
+  padding: 11px 20px;
   -moz-column-gap: 4px;
        column-gap: 4px;
 }
@@ -4177,10 +4179,12 @@ fieldset {
 .account__fieldset-inputs {
   -moz-column-gap: 16px;
        column-gap: 16px;
+  flex-wrap: wrap;
+  row-gap: 24px;
 }
 
 .account__fieldset-input {
-  flex: 0 0 32.2%;
+  flex: 0 0 286px;
 }
 
 .account__back {
@@ -4222,6 +4226,37 @@ fieldset {
 
 .account__fieldset-inputs--password .account__fieldset-input {
   width: 286px;
+}
+
+.account__fieldset-radioboxs {
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+
+.account__fieldset-inputs--organization {
+  row-gap: 24px;
+  flex-wrap: wrap;
+  width: 588px;
+}
+
+.account__title-btn {
+  padding: 8px 16px;
+}
+
+.account__title-btn span {
+  font-size: 16px;
+}
+
+.account__form--organization .account__fieldset {
+  display: none;
+}
+
+.account__form--organization .account__fieldset.--active {
+  display: block;
+}
+
+.account__fieldset-radiobox label {
+  font-size: 16px;
 }
 
 @media screen and (min-width: 1365px) {
@@ -4577,6 +4612,14 @@ fieldset {
   .account__fieldset-linkin {
     flex-basis: calc(50% - 20px);
   }
+
+  .account__fieldset-inputs--organization {
+    width: 528px;
+  }
+
+  .account__fieldset-input {
+    flex: 0 0 256px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
@@ -4603,7 +4646,7 @@ fieldset {
   }
 
   .btn {
-    padding: 12px 28px;
+    padding: 11px 28px;
   }
 
   .slider-navigation {
@@ -5155,10 +5198,6 @@ fieldset {
     row-gap: 32px;
   }
 
-  .account__fieldset-title {
-    margin-bottom: 20px;
-  }
-
   .account__fieldset-inputs {
     row-gap: 16px;
     -moz-column-gap: 16px;
@@ -5206,6 +5245,16 @@ fieldset {
 
   .account__fieldset-inputs--password .account__fieldset-input {
     width: 296px;
+  }
+
+  .account__fieldset-inputs--organization {
+    row-gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .account__fieldset-inputs--organization .account__fieldset-input {
+    flex-basis: calc(50% - 8px);
   }
 }
 
@@ -5911,6 +5960,31 @@ fieldset {
 
   .account__fieldset-inputs--password .account__fieldset-input {
     width: 100%;
+  }
+
+  .account__titles {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+
+  .account__fieldset-title {
+    margin-bottom: 20px;
+  }
+
+  .account__fieldset-radioboxs {
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: flex-start;
+  }
+
+  .account__fieldset-inputs--organization {
+    row-gap: 16px;
+    width: 100%;
+  }
+
+  .account__fieldset-inputs--organization .account__fieldset-input {
+    flex-basis: 100%;
   }
 }
 

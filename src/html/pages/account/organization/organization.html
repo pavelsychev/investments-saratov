@@ -39,6 +39,132 @@
           </button>
         </div>
       </aside>
+      <div class="account__content">
+        <button type="button" class="account__back">
+          <svg>
+            <use xlink:href="@img/icons/icons.svg#arrow-left-black"></use>
+          </svg>
+          <span>Назад</span>
+        </button>
+        <div class="account__titles">
+          <div class="account__title">Мои организации</div>
+          <button type="button" class="account__title-btn btn btn-sec btn--icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 10.5C3 10.0858 3.33579 9.75 3.75 9.75H16.25C16.6642 9.75 17 10.0858 17 10.5C17 10.9142 16.6642 11.25 16.25 11.25H3.75C3.33579 11.25 3 10.9142 3 10.5Z"
+                fill="#2D6FD0"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10 3.5C10.4142 3.5 10.75 3.83579 10.75 4.25V16.75C10.75 17.1642 10.4142 17.5 10 17.5C9.58579 17.5 9.25 17.1642 9.25 16.75V4.25C9.25 3.83579 9.58579 3.5 10 3.5Z"
+                fill="#2D6FD0"
+              />
+            </svg>
+            <span>Добавить организацию</span>
+          </button>
+        </div>
+        <div class="account__fieldset">
+          <div class="account__fieldset-title">Форма ведения бизнеса</div>
+          <div class="account__fieldset-radioboxs">
+            <div class="account__fieldset-radiobox radiobox radiobox-M" data-content-btn="bussiness-1">
+              <input checked id="bussiness-1" type="radio" name="bussiness-form" value="bussiness-1" />
+              <label for="bussiness-1">Юридическое лицо</label>
+            </div>
+            <div class="account__fieldset-radiobox radiobox radiobox-M" data-content-btn="bussiness-2">
+              <input id="bussiness-2" type="radio" name="bussiness-form" value="bussiness-2" />
+              <label for="bussiness-2">Индивидуальный предприниматель</label>
+            </div>
+          </div>
+        </div>
+        <form id="organization-form" action="" class="account__form account__form--organization">
+          <fieldset class="account__fieldset --active" data-content-block="bussiness-1">
+            <div class="account__fieldset-title">Данные организации</div>
+            <div class="account__fieldset-inputs account__fieldset-inputs--organization">
+              <div class="account__fieldset-input input">
+                <div class="input__head">Полное наименование организации*</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Введите наименование" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">ИНН*</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Введите ИНН" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">Электронная почта*</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">Номер телефона*</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="tel" placeholder="Введите номер телефона" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="account__fieldset" data-content-block="bussiness-2">
+            <div class="account__fieldset-title">Данные индивидуального предпринимателя</div>
+            <div class="account__fieldset-inputs">
+              <div class="account__fieldset-input input">
+                <div class="input__head">Имя*</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Введите имя" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">Фамилия*</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Введите фамилию" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">Отчество</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Введите отчество" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">ИНН*</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="text" placeholder="Введите ИНН" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">Электронная почта*</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">Номер телефона*</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="tel" placeholder="Введите номер телефона" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </div>
+          </fieldset>
+          <button form="organization-form" type="submit" class="account__btn btn btn-def">
+            <span>Сохранить изменения</span>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
