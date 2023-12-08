@@ -43,6 +43,42 @@
   &__back {
     display: none;
   }
+
+  &__fieldset-linkins {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  &__fieldset-linkin {
+    @extend %flexColumn;
+    justify-content: space-between;
+    row-gap: 20px;
+    flex-basis: calc(45% - 40px / 2);
+  }
+
+  &__fieldset-linkin__text {
+    @extend %secondaryTextRegular;
+    line-height: 130%;
+  }
+
+  &__fieldset-linkin__socials {
+    display: flex;
+    column-gap: 20px;
+
+    a {
+      @include sizes(40px, 40px);
+    }
+  }
+
+  &__fieldset-inputs--password {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-start;
+
+    .account__fieldset-input {
+      width: 286px;
+    }
+  }
 }
 
 @media screen and (max-width: $laptop) {
@@ -51,6 +87,10 @@
 
     &__content {
       flex-basis: 880px;
+    }
+
+    &__fieldset-linkin {
+      flex-basis: calc(50% - 40px / 2);
     }
   }
 }
@@ -67,7 +107,7 @@
 
     &__form,
     &__content {
-      row-gap: 31px;
+      row-gap: 32px;
     }
 
     &__fieldset-title {
@@ -106,6 +146,20 @@
     .input__head {
       font-weight: 500;
     }
+
+    &__fieldset-linkin {
+      flex-basis: calc(50% - 48px / 2);
+    }
+
+    &__fieldset-inputs {
+      row-gap: 20px;
+    }
+
+    &__fieldset-inputs--password {
+      .account__fieldset-input {
+        width: 296px;
+      }
+    }
   }
 }
 
@@ -123,6 +177,22 @@
 
     .btn {
       width: 100%;
+    }
+
+    &__fieldset-linkins {
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    &__fieldset-linkin {
+      row-gap: 16px;
+    }
+
+    &__fieldset-inputs--password {
+      row-gap: 16px;
+      .account__fieldset-input {
+        width: 100%;
+      }
     }
   }
 }

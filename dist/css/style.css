@@ -1202,6 +1202,7 @@ svg {
   visibility: visible;
 }
 
+.account__fieldset-linkin,
 .account__form,
 .account__content,
 .reg__content-btns,
@@ -1404,6 +1405,7 @@ svg {
   line-height: 130%;
 }
 
+.account__fieldset-linkin__text,
 .reg__content-btns-text,
 .recovery-pass__text,
 .auth__form-checkboxes div span,
@@ -1881,7 +1883,7 @@ fieldset {
 }
 
 .input__head {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   color: #2f2f2f;
 }
 
@@ -4185,6 +4187,43 @@ fieldset {
   display: none;
 }
 
+.account__fieldset-linkins {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+
+.account__fieldset-linkin {
+  justify-content: space-between;
+  row-gap: 20px;
+  flex-basis: calc(45% - 20px);
+}
+
+.account__fieldset-linkin__text {
+  line-height: 130%;
+}
+
+.account__fieldset-linkin__socials {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.account__fieldset-linkin__socials a {
+  width: 40px;
+  height: 40px;
+}
+
+.account__fieldset-inputs--password {
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: flex-start;
+}
+
+.account__fieldset-inputs--password .account__fieldset-input {
+  width: 286px;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -4533,6 +4572,10 @@ fieldset {
 
   .account__content {
     flex-basis: 880px;
+  }
+
+  .account__fieldset-linkin {
+    flex-basis: calc(50% - 20px);
   }
 }
 
@@ -5109,7 +5152,7 @@ fieldset {
 
   .account__form,
   .account__content {
-    row-gap: 31px;
+    row-gap: 32px;
   }
 
   .account__fieldset-title {
@@ -5151,6 +5194,18 @@ fieldset {
 
   .account .input__head {
     font-weight: 500;
+  }
+
+  .account__fieldset-linkin {
+    flex-basis: calc(50% - 24px);
+  }
+
+  .account__fieldset-inputs {
+    row-gap: 20px;
+  }
+
+  .account__fieldset-inputs--password .account__fieldset-input {
+    width: 296px;
   }
 }
 
@@ -5838,6 +5893,23 @@ fieldset {
   }
 
   .account .btn {
+    width: 100%;
+  }
+
+  .account__fieldset-linkins {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  .account__fieldset-linkin {
+    row-gap: 16px;
+  }
+
+  .account__fieldset-inputs--password {
+    row-gap: 16px;
+  }
+
+  .account__fieldset-inputs--password .account__fieldset-input {
     width: 100%;
   }
 }

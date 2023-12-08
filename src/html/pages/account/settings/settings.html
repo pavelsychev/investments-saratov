@@ -39,6 +39,117 @@
           </button>
         </div>
       </aside>
+      <div class="account__content">
+        <button type="button" class="account__back" data-modal="exit-confirmation">
+          <svg>
+            <use xlink:href="@img/icons/icons.svg#arrow-left-black"></use>
+          </svg>
+          <span>Назад</span>
+        </button>
+        <div class="account__title">Настройки</div>
+        <form id="change-password" class="account__form">
+          <fieldset class="account__fieldset">
+            <div class="account__fieldset-title">Привязка профиля</div>
+            <div class="account__fieldset-linkins">
+              <div class="account__fieldset-linkin">
+                <div class="account__fieldset-linkin__text">
+                  Вы можете связать свой профиль с профилями в социальных сетях и сервисах:
+                </div>
+                <div class="account__fieldset-linkin__socials">
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#vk-3"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#odn-3"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#mail-3"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#gmail-3"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="account__fieldset-linkin">
+                <div class="account__fieldset-linkin__text">Ваши связанные профили:</div>
+                <div class="account__fieldset-linkin__socials">
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#vk-3"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#odn-3"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="account__filedset">
+            <div class="account__fieldset-title">Смена пароля</div>
+            <div class="account__fieldset-inputs account__fieldset-inputs--password">
+              <div class="account__fieldset-input input input--password">
+                <div class="input__head">Старый пароль</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="password" placeholder="Введите текущий пароль" />
+                  <button type="button">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#password-show"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#password-hide"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input input--password">
+                <div class="input__head">Новый пароль</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="password" placeholder="Придумайте новый пароль" />
+                  <button type="button">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#password-show"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#password-hide"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input input--password">
+                <div class="input__head">Подтвердите новый пароль</div>
+                <div class="input__input">
+                  <input autocomplete="off" type="password" placeholder="Подтвердите новый пароль" />
+                  <button type="button">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#password-show"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#password-hide"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </div>
+          </fieldset>
+          <button class="account__btn btn btn-def">
+            <span>Сохранить изменения</span>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
