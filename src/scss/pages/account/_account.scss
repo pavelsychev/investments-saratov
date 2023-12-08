@@ -1,3 +1,128 @@
 .account {
   margin-top: 168px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  &__content {
+    padding: 40px;
+    background-color: $white;
+    border-radius: 4px;
+    flex: 0 0 970px;
+  }
+
+  &__form,
+  &__content {
+    @extend %flexColumn;
+    row-gap: 40px;
+  }
+
+  &__title {
+    @extend %h3;
+  }
+
+  &__fieldset-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 24px;
+  }
+
+  &__fieldset-inputs {
+    @extend %flexCenterStart;
+    column-gap: 16px;
+  }
+
+  &__fieldset-input {
+    flex: 0 0 32.2%;
+  }
+
+  &__back {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .account {
+    margin-top: 148px;
+
+    &__content {
+      flex-basis: 880px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .account {
+    margin-top: 128px;
+
+    &__content {
+      flex: 0 0 100%;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    &__form,
+    &__content {
+      row-gap: 31px;
+    }
+
+    &__fieldset-title {
+      margin-bottom: 20px;
+    }
+
+    &__fieldset-inputs {
+      row-gap: 16px;
+      column-gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    &__fieldset-input {
+      flex-basis: calc(50% - 16px / 2);
+    }
+
+    &__back {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+
+      svg {
+        @include sizes(20px, 20px);
+      }
+
+      span {
+        font-size: 16px;
+        line-height: 140%;
+      }
+    }
+
+    &__btn {
+      width: fit-content;
+    }
+
+    .input__head {
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .account {
+    margin: 118px 0 32px;
+
+    &__fieldset-title {
+      margin-bottom: 24px;
+    }
+
+    &__fieldset-input {
+      flex-basis: 100%;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
 }

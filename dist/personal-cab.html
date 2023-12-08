@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Персональные данные</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231207233912" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231207233912" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css?_v=20231208094903" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231208094903" />
 </head>
 
 
@@ -51,6 +51,65 @@
           </button>
         </div>
       </aside>
+      <div class="account__content">
+        <button type="button" class="account__back">
+          <svg>
+            <use xlink:href="assets/img/icons/icons.svg#arrow-left-black"></use>
+          </svg>
+          <span>Назад</span>
+        </button>
+        <div class="account__title">Персональные данные</div>
+        <form id="pers-data-form" class="account__form">
+          <fieldset class="account__fieldset">
+            <div class="account__fieldset-title">Личные данные</div>
+            <div class="account__fieldset-inputs">
+              <div class="account__fieldset-input input">
+                <div class="input__head">Имя*</div>
+                <div class="input__input">
+                  <input type="text" autocomplete="off" name="#" placeholder="Введите имя" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">Фамилия*</div>
+                <div class="input__input">
+                  <input type="text" autocomplete="off" name="#" placeholder="Введите фамилию" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">Отчество</div>
+                <div class="input__input">
+                  <input type="text" autocomplete="off" name="#" placeholder="Введите отчество" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="account__fieldset">
+            <div class="account__fieldset-title">Контактные данные</div>
+            <div class="account__fieldset-inputs">
+              <div class="account__fieldset-input input">
+                <div class="input__head">Электронная почта*</div>
+                <div class="input__input">
+                  <input type="email" autocomplete="off" name="#" placeholder="Введите электронную почту" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+              <div class="account__fieldset-input input">
+                <div class="input__head">Номер телефона*</div>
+                <div class="input__input">
+                  <input type="tel" autocomplete="off" name="#" placeholder="Введите номер телефона" />
+                </div>
+                <div class="input__hint">Error</div>
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit" form="pers-data-form" class="account__btn btn btn-def">
+            <span>Сохранить изменения</span>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -74,14 +133,14 @@
             <div class="modal-write__block-input input">
               <div class="input__head">Наименование компании или ИП</div>
               <div class="input__input">
-                <input type="text" placeholder="Введите наименование компании (ИП)" />
+                <input autocomplete="off" type="text" placeholder="Введите наименование компании (ИП)" />
               </div>
               <div class="input__hint">Error</div>
             </div>
             <div class="modal-write__block-input input">
               <div class="input__head">ФИО</div>
               <div class="input__input">
-                <input type="text" placeholder="Введите ваше ФИО" />
+                <input autocomplete="off" type="text" placeholder="Введите ваше ФИО" />
               </div>
               <div class="input__hint">Error</div>
             </div>
@@ -90,14 +149,14 @@
             <div class="modal-write__block-input input">
               <div class="input__head">Телефон</div>
               <div class="input__input">
-                <input type="tel" placeholder="Введите ваш телефон" />
+                <input autocomplete="off" type="tel" placeholder="Введите ваш телефон" />
               </div>
               <div class="input__hint">Error</div>
             </div>
             <div class="modal-write__block-input input">
               <div class="input__head">Электронная почта</div>
               <div class="input__input">
-                <input type="email" placeholder="Введите электронную почту" />
+                <input autocomplete="off" type="email" placeholder="Введите электронную почту" />
               </div>
               <div class="input__hint">Error</div>
             </div>
@@ -291,8 +350,8 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231207233912"></script>
-<script src="js/app.min.js?_v=20231207233912"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js?_v=20231208094903"></script>
+<script src="js/app.min.js?_v=20231208094903"></script>
 
   </body>
 </html>

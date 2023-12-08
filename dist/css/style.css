@@ -1202,6 +1202,8 @@ svg {
   visibility: visible;
 }
 
+.account__form,
+.account__content,
 .reg__content-btns,
 .auth__socials,
 .news__card-content,
@@ -1298,6 +1300,7 @@ svg {
   justify-content: space-between;
 }
 
+.account__fieldset-inputs,
 .calculator__block-radiobtns,
 .calculator__items,
 .success-hist__slide-items,
@@ -1379,6 +1382,7 @@ svg {
   text-transform: uppercase;
 }
 
+.account__title,
 .authentication__desc-title,
 .success-hist__slide-desc,
 .modal-write__title {
@@ -2914,11 +2918,13 @@ fieldset {
   padding: 40px 20px;
   border-radius: 4px;
   background-color: #ffffff;
-  width: 311px;
+  flex: 0 0 311px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .account-menu__items:nth-child(2) {
-  padding: 20px 0;
+  padding: 22px 0;
   margin: 20px 0;
   border-top: 1px solid #dee2e7;
   border-bottom: 1px solid #dee2e7;
@@ -4140,6 +4146,45 @@ fieldset {
   margin-top: 168px;
 }
 
+.account__container {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.account__content {
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  flex: 0 0 970px;
+}
+
+.account__form,
+.account__content {
+  row-gap: 40px;
+}
+
+.account__fieldset-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 24px;
+}
+
+.account__fieldset-inputs {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.account__fieldset-input {
+  flex: 0 0 32.2%;
+}
+
+.account__back {
+  display: none;
+}
+
 @media screen and (min-width: 1365px) {
   .btn-def:not(:disabled):hover {
     background: #2d6fd0;
@@ -4209,6 +4254,7 @@ fieldset {
     font-size: 48px;
   }
 
+  .account__title,
   .authentication__desc-title,
   .success-hist__slide-desc,
   .modal-write__title {
@@ -4279,6 +4325,10 @@ fieldset {
   .header-bottom__list li:nth-child(2),
   .header-bottom__list li:nth-child(6) {
     display: none;
+  }
+
+  .account-menu {
+    flex-basis: 280px;
   }
 
   .governor__container {
@@ -4475,6 +4525,14 @@ fieldset {
 
   .reg__form-numbers__block svg {
     width: 141px;
+  }
+
+  .account {
+    margin-top: 148px;
+  }
+
+  .account__content {
+    flex-basis: 880px;
   }
 }
 
@@ -4675,6 +4733,10 @@ fieldset {
   .header-bottom__btns {
     -moz-column-gap: 24px;
          column-gap: 24px;
+  }
+
+  .account-menu {
+    display: none;
   }
 
   .governor__container {
@@ -5034,6 +5096,62 @@ fieldset {
   .reg__form-numbers__block svg {
     width: 104px;
   }
+
+  .account {
+    margin-top: 128px;
+  }
+
+  .account__content {
+    flex: 0 0 100%;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .account__form,
+  .account__content {
+    row-gap: 31px;
+  }
+
+  .account__fieldset-title {
+    margin-bottom: 20px;
+  }
+
+  .account__fieldset-inputs {
+    row-gap: 16px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .account__fieldset-input {
+    flex-basis: calc(50% - 8px);
+  }
+
+  .account__back {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 4px;
+         column-gap: 4px;
+  }
+
+  .account__back svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .account__back span {
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .account__btn {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .account .input__head {
+    font-weight: 500;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -5047,6 +5165,7 @@ fieldset {
     font-size: 32px;
   }
 
+  .account__title,
   .authentication__desc-title,
   .success-hist__slide-desc,
   .modal-write__title {
@@ -5704,6 +5823,22 @@ fieldset {
 
   .reg__form-captcha-img {
     flex-shrink: 0;
+  }
+
+  .account {
+    margin: 118px 0 32px;
+  }
+
+  .account__fieldset-title {
+    margin-bottom: 24px;
+  }
+
+  .account__fieldset-input {
+    flex-basis: 100%;
+  }
+
+  .account .btn {
+    width: 100%;
   }
 }
 
