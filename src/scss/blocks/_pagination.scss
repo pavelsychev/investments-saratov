@@ -1,0 +1,70 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  gap: 0 16px;
+  &__number,
+  &__dots,
+  &__arrow-left,
+  &__arrow-right {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid $inputGreyStroke;
+    width: 40px;
+    height: 40px;
+    color: $greyTxt;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 143%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $blueGradient;
+      color: #fff;
+    }
+  }
+  &__arrow-left svg,
+  &__arrow-right svg {
+    stroke: $greyTxt;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__arrow-left:hover svg path,
+  &__arrow-left:focus svg path,
+  &__arrow-left:active svg path,
+  &__arrow-right:hover svg path,
+  &__arrow-right:focus svg path,
+  &__arrow-right:active svg path {
+    transition: all 0.5s ease;
+    stroke: #fff;
+  }
+}
+@media screen and (min-width: $laptop) {
+  .pagination {
+    margin: 40px 0 160px 0;
+  }
+}
+@media screen and (max-width: $laptop) and (min-width: $tablet) {
+  .pagination {
+    margin: 40px 0 140px 0;
+  }
+}
+@media screen and (max-width: $tablet) and (min-width: $mob) {
+  .pagination {
+    margin: 40px 0 100px 0;
+  }
+}
+@media screen and (max-width: $mob) {
+  .pagination {
+    margin: 32px 0 80px 0;
+    &__number:nth-of-type(4) {
+      display: none;
+    }
+  }
+}

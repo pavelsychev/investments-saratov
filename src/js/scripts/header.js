@@ -20,5 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.href.includes('main')) {
     scrollHeaderLoad();
     scrollHeader();
+  } else {
+    header.classList.remove('header--transparent');
   }
 });

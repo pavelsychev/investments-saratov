@@ -1,0 +1,135 @@
+.history-all {
+  min-height: 100vh;
+  &__breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin: 250px 0 60px 0;
+  }
+  &__breadcrumb {
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0 8px 0 0;
+    cursor: pointer;
+    transition: $transitionColor;
+    &:hover {
+      color: $blueHover;
+    }
+  }
+  &__breadcrumb:last-child {
+    color: $black;
+    font-weight: 500;
+  }
+  &__container {
+    @extend %flexColumn;
+    row-gap: 41px;
+  }
+  &__title {
+    color: $black;
+  }
+  &__swiper {
+    width: 100%;
+    height: 100%;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  &__card {
+    @extend %flexColumn;
+    gap: 24px 0;
+    background-color: $white;
+    border-radius: 4px;
+  }
+  &__card-pic {
+    flex-shrink: 0;
+    @include sizes(100%, 300px);
+  }
+  &__card-pic__img {
+    border-radius: 4px 4px 0 0;
+    object-fit: cover;
+  }
+  &__card-content {
+    padding: 0 32px;
+    @extend %flexColumn;
+    gap: 24px 0;
+  }
+  &__card-content-text__container {
+    @extend %flexColumn;
+    gap: 8px 0;
+  }
+  &__card-more {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 24px 0;
+  }
+  &__card-content-text__item {
+    display: flex;
+    gap: 0 8px;
+  }
+  &__card-content-title {
+    color: $black;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  &__card-content-text__title {
+    color: $black;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  &__card-content-text {
+    color: $black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  &__card-date {
+    color: $black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  &__card-link {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+    border-bottom: 1px solid $black;
+    transition: $transitionBorder;
+    cursor: pointer;
+    &:hover {
+      border-bottom: transparent;
+    }
+  }
+}
+@media screen and (max-width: $tablet) {
+  .history-all {
+    &__breadcrumbs {
+      margin: 200px 0 50px 0;
+    }
+    &__cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .history-all {
+    &__breadcrumbs {
+      margin: 165px 0 40px 0;
+    }
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+    &__card-content-text,
+    &__card-date {
+      font-size: 14px;
+    }
+    &__card-link {
+      font-size: 16px;
+    }
+  }
+}
