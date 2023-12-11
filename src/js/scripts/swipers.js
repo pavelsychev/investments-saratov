@@ -46,6 +46,12 @@ const SWIPERS = {
     slide: 'news__slide',
     counts: [countCards.five, countCards.three, countCards.one],
   },
+  history: {
+    card: 'history-personal__similar-card',
+    slider: 'history-personal__similar-slider',
+    slide: 'history-personal__similar-slide',
+    counts: [countCards.three, countCards.two, countCards.one],
+  },
 };
 
 // ------------------ Инициализация слайдеров ---------------------//
@@ -155,6 +161,36 @@ function initNewsSlider() {
   }
 }
 
+function initHistorySlider() {
+  if (document.querySelector('.history-personal__similar-swiper')) {
+    const slider = document.querySelector('.history-personal__similar-swiper');
+    const btnPrev = slider.parentElement.querySelector('.slider-navigation__btns-prev');
+    const btnNext = slider.parentElement.querySelector('.slider-navigation__btns-next');
+
+    new Swiper(slider, {
+      modules: [Navigation],
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 1500,
+      loop: true,
+      navigation: {
+        nextEl: btnNext,
+        prevEl: btnPrev,
+      },
+      breakpoints: {
+        300: {
+          slidesPerView: 1.1,
+          spaceBetween: 13,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+}
+
 function initSliders() {
   initBenefitsSlider();
   initSuccessHistSlider();
@@ -162,6 +198,8 @@ function initSliders() {
 
   cardsInnerWidth(SWIPERS.news);
   initNewsSlider();
+  cardsInnerWidth(SWIPERS.history);
+  initHistorySlider();
 }
 // ----------------------------------------------------------------- //
 

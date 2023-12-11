@@ -1,14 +1,12 @@
 .history-all {
   min-height: 100vh;
   &__breadcrumbs {
-    display: flex;
-    align-items: center;
-    margin: 250px 0 60px 0;
+    @extend %flexCenterStart;
+    @extend %marginBreadcrumbs;
   }
   &__breadcrumb {
-    color: #666;
-    font-size: 16px;
-    font-weight: 400;
+    color: $colorBreadcrumb;
+    @extend %regular16;
     line-height: 120%;
     margin: 0 8px 0 0;
     cursor: pointer;
@@ -107,9 +105,6 @@
 }
 @media screen and (max-width: $tablet) {
   .history-all {
-    &__breadcrumbs {
-      margin: 200px 0 50px 0;
-    }
     &__cards {
       grid-template-columns: 1fr 1fr;
     }
@@ -118,9 +113,6 @@
 
 @media screen and (max-width: $mob) {
   .history-all {
-    &__breadcrumbs {
-      margin: 165px 0 40px 0;
-    }
     &__cards {
       grid-template-columns: 1fr;
     }

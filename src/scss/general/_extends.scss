@@ -12,7 +12,15 @@
   opacity: 1;
   visibility: visible;
 }
-
+%marginBreadcrumbs {
+  margin: 220px 0 60px 0;
+  @media screen and (max-width: $tablet) {
+    margin: 200px 0 50px 0;
+  }
+  @media screen and (max-width: $mob) {
+    margin: 134px 0 40px 0;
+  }
+}
 //-----Flex----------//
 %flexColumn {
   display: flex;

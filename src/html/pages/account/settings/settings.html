@@ -40,12 +40,13 @@
         </div>
       </aside>
       <div class="account__content">
-        <button type="button" class="account__back" data-modal="exit-confirmation">
+        <button type="button" class="account__back">
           <svg>
             <use xlink:href="@img/icons/icons.svg#arrow-left-black"></use>
           </svg>
           <span>Назад</span>
         </button>
+
         <div class="account__title">Настройки</div>
         <form id="change-password" class="account__form">
           <fieldset class="account__fieldset">
@@ -145,7 +146,7 @@
               </div>
             </div>
           </fieldset>
-          <button class="account__btn btn btn-def">
+          <button form="change-password" type="submit" class="account__btn btn btn-def">
             <span>Сохранить изменения</span>
           </button>
         </form>

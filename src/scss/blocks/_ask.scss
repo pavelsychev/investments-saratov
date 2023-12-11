@@ -1,0 +1,173 @@
+.ask {
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &__pic {
+    flex: 1 1 100%;
+    @extend %flexColumn;
+    align-items: start;
+    justify-content: space-between;
+    background-color: $bluePrimary;
+    overflow: hidden;
+    width: auto;
+  }
+  &__pic-desc {
+    @extend %flexColumn;
+    gap: 28px 0;
+    padding: 120px 0 0 190px;
+  }
+  &__pic-title {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  &__pic-text {
+    color: #fff;
+    @extend %mainTxt;
+    max-width: 511px;
+  }
+  &__pic-img {
+    @include sizes(1200px, 470px);
+    padding: 0 0 21px 0;
+  }
+  &__pic-img__img {
+    object-fit: cover;
+  }
+  &__form-container {
+    flex: 1 1 100%;
+    background-color: #fff;
+  }
+  &__form {
+    @extend %flexColumn;
+    gap: 20px 0;
+    padding: 120px 110px;
+    max-width: 930px;
+  }
+  &__form-name,
+  &__form-email,
+  &__form-textarea {
+    @extend %regular16;
+  }
+  &__form-textarea {
+    min-height: 154px;
+  }
+  &__form-btn-agree {
+    @extend %flexColumn;
+    gap: 20px;
+  }
+  &__form-btn {
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+  &__form-agree,
+  &__form-agree-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  &__form-agree {
+    color: $black;
+    max-width: 500px;
+  }
+  &__form-agree-link {
+    color: $bluePrimary;
+    transition: $transitionColor;
+    cursor: pointer;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+@media screen and (min-width: $laptop) {
+  .ask {
+    &__pic {
+      align-items: end;
+    }
+    &__pic-desc {
+      padding: 120px 280px 0 0;
+    }
+    &__pic-img {
+      @include sizes(1200px, 470px);
+      padding: 0 0 21px 0;
+    }
+    &__pic-img__img {
+      object-position: 190px 0;
+      object-fit: cover;
+    }
+  }
+}
+@media screen and (max-width: $laptop) and (min-width: $tablet) {
+  .ask {
+    &__pic-text {
+      max-width: 470px;
+    }
+    &__pic-img {
+      @include sizes(100%, 470px);
+      padding: 0 0 15px 0;
+    }
+    &__pic-img__img {
+      object-position: -300px 0;
+      object-fit: cover;
+    }
+  }
+}
+@media screen and (max-width: $tablet) {
+  .ask {
+    &__container {
+      flex-direction: column;
+      padding: 100px 40px;
+      background-color: #fff;
+    }
+    &__pic {
+      align-items: start;
+      background-color: #fff;
+    }
+    &__pic-desc {
+      margin: auto 0;
+      padding: 0 0 0 0;
+    }
+    &__pic-title {
+      color: $black;
+      font-size: 36px;
+    }
+    &__pic-text {
+      color: $black;
+      max-width: 100%;
+    }
+    &__pic-img {
+      display: none;
+    }
+    &__form {
+      padding: 32px 0 0 0;
+    }
+    &__form-btn-agree {
+      flex-direction: row;
+    }
+    &__form-btn {
+      width: auto;
+    }
+  }
+}
+@media screen and (max-width: $mob) {
+  .ask {
+    &__pic-title {
+      font-size: 24px;
+    }
+    &__pic-text {
+      font-size: 16px;
+    }
+    &__form-btn-agree {
+      flex-direction: column;
+    }
+    &__form-btn {
+      width: 100%;
+    }
+  }
+}

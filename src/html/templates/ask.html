@@ -1,0 +1,48 @@
+<section class="ask">
+  <div class="ask__container">
+    <div class="ask__pic">
+      <div class="ask__pic-desc">
+        <span class="ask__pic-title">Задать вопрос</span>
+        <p class="ask__pic-text">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+      </div>
+      <div class="ask__pic-img">
+        <img src="@img/ask/ask-main.svg" alt="ask-img" class="ask__pic-img__img" />
+      </div>
+    </div>
+    <div class="ask__form-container">
+      <form action="#!" class="ask__form">
+        <label for="ask-name" class="ask__form-label input__head">ФИО</label>
+        <input
+          tabindex="1"
+          id="ask-name"
+          type="name"
+          class="ask__form-name input__input"
+          placeholder="Введите ваше ФИО"
+        />
+        <label for="ask-email" class="ask__form-label input__head">Электронная почта</label>
+        <input
+          tabindex="2"
+          id="ask-email"
+          type="email"
+          class="ask__form-email input__input"
+          placeholder="Введите электронную почту"
+        />
+        <label for="ask-textarea" class="ask__form-label textarea__head">Текст обращения</label>
+        <textarea
+          tabindex="3"
+          id="ask-textarea"
+          class="ask__form-textarea textarea__textarea"
+          placeholder="Опишите суть вопроса или предложения"
+        ></textarea>
+        <div class="ask__form-btn-agree">
+          <button tabindex="4" type="submit" class="ask__form-btn btn btn-def">Задать вопрос</button>
+          <span class="ask__form-agree">
+            Заполняя форму обратной связи, Вы соглашаетесь с <a href="#!" class="ask__form-agree-link"
+              >политикой конфиденциальности.</a
+            >
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
